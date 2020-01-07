@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="mtsToolCaliburn.Views.Pages.HomePageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <!-- 布局设计
+        1. 左侧边栏
+        2. 头部搜索栏
+        3. 工作区 -->
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="260" />
+                <ColumnDefinition Width ="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Image></Image>
+                <Button  Content="1"></Button>
+            </StackPanel>
+            <Grid Grid.Column="1">
+                <StackPanel  Orientation="Horizontal" >
+                    <TextBox Width="144" Height="20"></TextBox>
+                    <Button Content="search" Height="20" ></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="260" />
+                <ColumnDefinition Width ="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</UserControl>
