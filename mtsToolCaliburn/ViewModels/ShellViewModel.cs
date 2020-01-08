@@ -6,10 +6,13 @@ namespace mtsToolCaliburn {
     [Export(typeof(IShell))]
     public class ShellViewModel : Conductor<Screen>, IShell
     {
-        public ShellViewModel(HomePageViewModel homePageModel)
+        public ShellViewModel()
         {
-            HomePageModel = homePageModel;
+            InitializeHomePage();
         }
-        public HomePageViewModel HomePageModel { get; private set; }
+        public void InitializeHomePage()
+        {
+            ActivateItem(new HomePageViewModel());
+        }
     }
 }
