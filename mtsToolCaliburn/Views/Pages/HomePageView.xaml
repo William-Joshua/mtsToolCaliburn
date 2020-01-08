@@ -4,9 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             VerticalContentAlignment="Stretch" 
-                        HorizontalContentAlignment="Stretch">
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
     <!-- 布局设计
         1. 左侧边栏
         2. 头部搜索栏
@@ -17,37 +15,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="260" />
-                <ColumnDefinition Width ="*" />
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <Image  Name="purpleLogo"  Source="pack://SiteOfOrigin:,,,/Resources/Images/logo.png" Width="140" Height="28" Visibility = "Visible" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-            </Grid>
-            <DockPanel Grid.Column="1">
-                <StackPanel  Orientation="Horizontal"  DockPanel.Dock="Left">
-                    <Grid  Width="49" >
-                        <iconPacks:PackIconMaterial Kind="Menu" VerticalAlignment="Center" Foreground="#9c9fa6"></iconPacks:PackIconMaterial>
-                    </Grid>
-                    <Grid Width="40">
-                        <iconPacks:PackIconMaterial Kind="Magnify" VerticalAlignment="Center"  Foreground="#9c9fa6" HorizontalAlignment="Center" ></iconPacks:PackIconMaterial>
-                    </Grid>
-                    <Grid>
-                        <TextBlock Text="Search projects" VerticalAlignment="Center" Foreground="#9c9fa6" FontSize="14px"></TextBlock>
-                    </Grid>
-                </StackPanel>
-                <StackPanel  Orientation="Horizontal"  DockPanel.Dock="Right">
-                    <Grid  Width="49" >
-                        <iconPacks:PackIconMaterial Kind="Menu" VerticalAlignment="Center" Foreground="#9c9fa6"></iconPacks:PackIconMaterial>
-                    </Grid>
-                    <Grid Width="40">
-                        <iconPacks:PackIconMaterial Kind="Magnify" VerticalAlignment="Center"  Foreground="#9c9fa6" HorizontalAlignment="Center" ></iconPacks:PackIconMaterial>
-                    </Grid>
-                    <Grid>
-                        <TextBlock Text="Search projects" VerticalAlignment="Center" Foreground="#9c9fa6" FontSize="14px"></TextBlock>
-                    </Grid>
-                </StackPanel>
-            </DockPanel>
+            
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
