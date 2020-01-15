@@ -9,7 +9,7 @@
         1. 左侧边栏
         2. 头部搜索栏
         3. 工作区 -->
-    <Grid >
+    <Grid Background="#f2edf3" >
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>

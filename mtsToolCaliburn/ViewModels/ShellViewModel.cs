@@ -2,18 +2,21 @@ using System.ComponentModel.Composition;
 using System.Windows;
 using Caliburn.Micro;
 using MahApps.Metro.IconPacks;
+using mtsToolCaliburn.ViewModels.Components;
 using mtsToolCaliburn.ViewModels.Pages;
 
 namespace mtsToolCaliburn {
     [Export(typeof(IShell))]
     public class ShellViewModel : Conductor<Screen>, IShell
     {
+        public NavigateBarViewModel NavBarItem { get; set; }
         public ShellViewModel()
         {
             InitializeHomePage();
         }
         public void InitializeHomePage()
         {
+            NavBarItem = new NavigateBarViewModel();
             ActivateItem(new HomePageViewModel());
         }
 
@@ -24,21 +27,29 @@ namespace mtsToolCaliburn {
 
         public void WindowFullScreen()
         {
-            if(_fullScreenState == false)
+            if (_fullScreenState != ScreenState.Max)
             {
                 Application.Current.MainWindow.WindowState = WindowState.Maximized;
-                _fullScreenState = true;
+                _fullScreenState = ScreenState.Max;
             }
             else
             {
                 Application.Current.MainWindow.WindowState = WindowState.Normal;
-                _fullScreenState = false;
+                _fullScreenState = ScreenState.Normal;
             }
-
         }
 
-        private bool _fullScreenState = false;
-        public bool FullScreenState
+        public void WindowMinimizeScreen()
+        {
+
+            if (_fullScreenState != ScreenState.Mini)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Minimized;
+                _fullScreenState = ScreenState.Mini;
+            }        }
+
+        private ScreenState _fullScreenState = ScreenState.Normal;
+        public ScreenState FullScreenState
         {
             get
             {
@@ -50,5 +61,11 @@ namespace mtsToolCaliburn {
             }
         }
 
+        public enum ScreenState
+        {
+            Max,
+            Normal,
+            Mini
+        }
     }
 }

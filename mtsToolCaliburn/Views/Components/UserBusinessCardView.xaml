@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="mtsToolCaliburn.Views.Components.UserBusinessCardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="84" d:DesignWidth="188">
+    <Grid Width="188" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width=" 18"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Height="44">
+            <Grid.Clip>
+                <EllipseGeometry Center="22,22" RadiusX="22" RadiusY="22">
+                </EllipseGeometry>
+            </Grid.Clip>
+            <Image Name="accountFace" Source="pack://SiteOfOrigin:,,,/Resources/Images/accountface.jpg" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+        </Grid>
+        <Grid Grid.Column="2" Height="18">
+            <iconPacks:PackIconMaterial Kind="BookmarkCheck" Foreground="#1bcfb4"></iconPacks:PackIconMaterial>
+        </Grid>
+        <Grid Grid.Column="1" Height="34" Width="90">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="14"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="David Grey. H" FontFamily="ubuntu-bold" FontSize="12" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Text="Project Manager" FontFamily="ubuntu-regular" FontSize="11" Foreground="#C3BDBF" TextAlignment="Center"></TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

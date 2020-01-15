@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
          xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
          xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-                      xmlns:cal="http://www.caliburnproject.org" 
+         xmlns:cal="http://www.caliburnproject.org" 
          Title="MTS Tools Console" TitleCharacterCasing="Normal"
          GlowBrush="{DynamicResource AccentColorBrush}"
          WindowStartupLocation="CenterScreen" ShowTitleBar="False"
@@ -19,7 +19,7 @@
                 <ColumnDefinition Width ="*" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <Image  Name="purpleLogo"  Source="pack://SiteOfOrigin:,,,/Resources/Images/logo.png" Width="140" Height="28" Visibility = "Visible" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                <Image  Name="purpleLogo"  Source="pack://SiteOfOrigin:,,,/Resources/Images/logo.png" Width="140" Height="28"  RenderOptions.BitmapScalingMode="HighQuality"></Image>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
@@ -38,22 +38,34 @@
                     </Grid>
                 </StackPanel>
                 <DockPanel  Grid.Column="1">
-                    <Grid Width="68" DockPanel.Dock="Right"  Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action PowerOff()]">
+                    <Grid Width="54" DockPanel.Dock="Right"  Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action PowerOff()]">
                         <iconPacks:PackIconMaterial Kind="Power" VerticalAlignment="Center" HorizontalAlignment="Center"   Foreground="#9c9fa6"  Name="Power"  ></iconPacks:PackIconMaterial>
                     </Grid>
-                    <Grid Width="68" DockPanel.Dock="Right" Background="Transparent" >
+                    <Grid Width="54" DockPanel.Dock="Right" Background="Transparent" >
                         <iconPacks:PackIconMaterial Kind="BellOutline" VerticalAlignment="Center" HorizontalAlignment="Center"   Foreground="#9c9fa6"></iconPacks:PackIconMaterial>
                     </Grid>
-                    <Grid Width="68" DockPanel.Dock="Right" Background="Transparent" >
+                    <Grid Width="54" DockPanel.Dock="Right" Background="Transparent" >
                         <iconPacks:PackIconMaterial Kind="EmailOutline" VerticalAlignment="Center" HorizontalAlignment="Center"   Foreground="#9c9fa6"></iconPacks:PackIconMaterial>
                     </Grid>
-                    <Grid Width="68" DockPanel.Dock="Right" Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action WindowFullScreen()]">
+                    <Grid Width="54" DockPanel.Dock="Right" Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action WindowFullScreen()]">
                         <iconPacks:PackIconMaterial Kind="Fullscreen" VerticalAlignment="Center" HorizontalAlignment="Center"   Foreground="#9c9fa6"></iconPacks:PackIconMaterial>
+                    </Grid>
+                    <Grid Width="54" DockPanel.Dock="Right" Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action WindowMinimizeScreen()]">
+                        <iconPacks:PackIconMaterial Kind="WindowMinimize" VerticalAlignment="Center" HorizontalAlignment="Center"   Foreground="#9c9fa6"></iconPacks:PackIconMaterial>
                     </Grid>
                     <Grid></Grid>
                 </DockPanel>
             </Grid>
         </Grid>
-        <ContentControl x:Name="ActiveItem" Grid.Row="1"></ContentControl>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="260" />
+                <ColumnDefinition Width ="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <ContentControl x:Name="NavBarItem"></ContentControl>
+            </Grid>
+            <ContentControl x:Name="ActiveItem" Grid.Row="1" Grid.Column="1"></ContentControl>
+        </Grid>
     </Grid>
 </controls:MetroWindow>
