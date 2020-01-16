@@ -7,7 +7,7 @@
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="84" d:DesignWidth="188">
-    <Grid Width="188" >
+    <Grid Width="188" Background="Transparent" Cursor="Hand" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="44"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -29,7 +29,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <TextBlock Text="David Grey. H" FontFamily="ubuntu-bold" FontSize="12" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+                <TextBlock Text="David Grey. H" FontFamily="ubuntu-bold" FontSize="12" FontWeight="Bold" TextAlignment="Center" Foreground="#343a40"></TextBlock>
             </Grid>
             <Grid Grid.Row="1">
                 <TextBlock Text="Project Manager" FontFamily="ubuntu-regular" FontSize="11" Foreground="#C3BDBF" TextAlignment="Center"></TextBlock>

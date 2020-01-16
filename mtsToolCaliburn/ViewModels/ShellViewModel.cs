@@ -10,6 +10,7 @@ namespace mtsToolCaliburn {
     public class ShellViewModel : Conductor<Screen>, IShell
     {
         public NavigateBarViewModel NavBarItem { get; set; }
+        public LoginUserCardViewModel LoginUserCardInfo { get; set; }
         public ShellViewModel()
         {
             InitializeHomePage();
@@ -17,6 +18,7 @@ namespace mtsToolCaliburn {
         public void InitializeHomePage()
         {
             NavBarItem = new NavigateBarViewModel();
+            LoginUserCardInfo = new LoginUserCardViewModel();
             ActivateItem(new HomePageViewModel());
         }
 
@@ -24,7 +26,8 @@ namespace mtsToolCaliburn {
         {
             Application.Current.Shutdown();
         }
-
+        
+        #region Ö÷´°ÌåËõ·Å
         public void WindowFullScreen()
         {
             if (_fullScreenState != ScreenState.Max)
@@ -38,16 +41,14 @@ namespace mtsToolCaliburn {
                 _fullScreenState = ScreenState.Normal;
             }
         }
-
         public void WindowMinimizeScreen()
         {
-
             if (_fullScreenState != ScreenState.Mini)
             {
                 Application.Current.MainWindow.WindowState = WindowState.Minimized;
                 _fullScreenState = ScreenState.Mini;
-            }        }
-
+            }
+        }
         private ScreenState _fullScreenState = ScreenState.Normal;
         public ScreenState FullScreenState
         {
@@ -60,12 +61,13 @@ namespace mtsToolCaliburn {
                 _fullScreenState = value;
             }
         }
-
         public enum ScreenState
         {
             Max,
             Normal,
             Mini
         }
+        #endregion
+
     }
 }

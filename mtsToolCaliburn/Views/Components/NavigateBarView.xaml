@@ -17,7 +17,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel Orientation="Vertical">
-                <Grid Height="48"></Grid>
+                <controls:ContentControlEx x:Name="NavBarItems" ></controls:ContentControlEx>
             </StackPanel>
         </Grid>
     </Grid>

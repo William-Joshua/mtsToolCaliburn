@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace mtsToolCaliburn.ViewModels.Components
 {
-    public class NavigateBarViewModel: PropertyChangedBase
+    public class NavigateBarViewModel : PropertyChangedBase
     {
         public UserBusinessCardViewModel UserBussinessCard { get; }
+
+        public  NavigateItemViewModel NavBarItems { get; }
         public NavigateBarViewModel()
         {
             UserBussinessCard = new UserBusinessCardViewModel();
+            NavBarItems = new NavigateItemViewModel();
         }
     }
 }
