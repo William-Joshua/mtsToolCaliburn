@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:cal="http://www.caliburnproject.org" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="260">
@@ -16,9 +17,20 @@
             <controls:ContentControlEx x:Name="UserBussinessCard" ></controls:ContentControlEx>
         </Grid>
         <Grid Grid.Row="1">
-            <StackPanel Orientation="Vertical">
-                <controls:ContentControlEx x:Name="NavBarItems" ></controls:ContentControlEx>
-            </StackPanel>
+            <ScrollViewer Template="{StaticResource PurpleNavMenuScroll}">
+                <ItemsControl ItemsSource="{Binding Path=NavBarItems}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </UserControl>

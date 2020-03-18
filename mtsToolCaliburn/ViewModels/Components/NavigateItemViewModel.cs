@@ -11,8 +11,6 @@ namespace mtsToolCaliburn.ViewModels.Components
 {
     public class NavigateItemViewModel: PropertyChangedBase
     {
-        public NavigateItemUI NavItemUI { get; set; }
-
         public string NavItemNameTitle { get; set; }
         public Visibility SubItemArrowVisibility { get; set; }
         public PackIconMaterialKind NavItemIconKind { get; set; }
