@@ -16,7 +16,7 @@ namespace mtsToolCaliburn.ViewModels.Components
 
         public UserBusinessCardViewModel UserBussinessCard { get; }
 
-        public NavigateItemViewModel NavBarItems { get; }
+        public List<NavigateItemViewModel> NavBarItems { get; } = new List<NavigateItemViewModel>();
         public NavigateBarViewModel()
         {
             NavigateMenusRootObject NavigateMenus = new NavigateMenusRootObject();
@@ -27,7 +27,11 @@ namespace mtsToolCaliburn.ViewModels.Components
                 NavigateMenus =(NavigateMenusRootObject) jsonSerializer.Deserialize(reader,typeof(NavigateMenusRootObject));
             }
             UserBussinessCard = new UserBusinessCardViewModel();
-            NavBarItems = new NavigateItemViewModel();
+            foreach(var NavigateMenu in NavigateMenus.menus.menu)
+            {
+                NavigateItemViewModel navigateItemViewModel = new NavigateItemViewModel(NavigateMenu);
+                NavBarItems.Add(navigateItemViewModel);
+            }
         }
     }
 }

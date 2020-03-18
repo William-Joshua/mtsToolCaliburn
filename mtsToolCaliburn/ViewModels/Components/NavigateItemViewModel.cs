@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using MahApps.Metro.IconPacks;
+using mtsToolCaliburn.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,13 @@ namespace mtsToolCaliburn.ViewModels.Components
             NavItemNameTitle = "DashBoard";
             SubItemArrowVisibility = Visibility.Hidden;
             NavItemIconKind = PackIconMaterialKind.Home ;
+        }
+
+        public NavigateItemViewModel(NavigateMenuItem navigateMenuItem)
+        {
+            NavItemNameTitle = navigateMenuItem.title;
+            SubItemArrowVisibility = navigateMenuItem.subArrow==true? Visibility.Visible : Visibility.Hidden;
+            NavItemIconKind = navigateMenuItem.iconType;
         }
         public class NavigateItemUI
         {
