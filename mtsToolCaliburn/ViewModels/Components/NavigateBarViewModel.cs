@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace mtsToolCaliburn.ViewModels.Components
 {
@@ -16,7 +17,7 @@ namespace mtsToolCaliburn.ViewModels.Components
 
         public UserBusinessCardViewModel UserBussinessCard { get; }
 
-        public List<NavigateItemViewModel> NavBarItems { get; } = new List<NavigateItemViewModel>();
+        public List<NavigateItemMenu> NavBarItems { get; } = new List<NavigateItemMenu>();
         public NavigateBarViewModel()
         {
             NavigateMenusRootObject NavigateMenus = new NavigateMenusRootObject();
@@ -29,8 +30,8 @@ namespace mtsToolCaliburn.ViewModels.Components
             UserBussinessCard = new UserBusinessCardViewModel();
             foreach(var NavigateMenu in NavigateMenus.menus.menu)
             {
-                NavigateItemViewModel navigateItemViewModel = new NavigateItemViewModel(NavigateMenu);
-                NavBarItems.Add(navigateItemViewModel);
+                NavigateItemMenu navigateItemViewModel = new NavigateItemMenu(NavigateMenu);
+                NavBarItems.Add(new NavigateItemMenu(NavigateMenu));
             }
         }
     }
