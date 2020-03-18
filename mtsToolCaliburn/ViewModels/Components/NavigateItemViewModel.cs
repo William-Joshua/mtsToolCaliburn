@@ -18,7 +18,7 @@ namespace mtsToolCaliburn.ViewModels.Components
         {
             NavItemNameTitle = "DashBoard";
             SubItemArrowVisibility = Visibility.Hidden;
-            NavItemIconKind = PackIconMaterialKind.Home;
+            NavItemIconKind = PackIconMaterialKind.Home ;
         }
         public class NavigateItemUI
         {
