@@ -8,6 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="56" d:DesignWidth="188">
     <Grid Width="188" Background="Transparent" Cursor="Hand">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="18"></ColumnDefinition>
