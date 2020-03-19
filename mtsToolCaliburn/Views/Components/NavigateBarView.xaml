@@ -18,29 +18,28 @@
             <controls:ContentControlEx x:Name="UserBussinessCard" ></controls:ContentControlEx>
         </Grid>
         <Grid Grid.Row="1">
-            <ScrollViewer >
-                <ItemsControl ItemsSource="{Binding NavBarItems}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel></StackPanel>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Width="188" Background="Transparent" Cursor="Hand">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="18"></ColumnDefinition>
-                                    <ColumnDefinition Width="18"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0"  Text='{Binding NavItemNameTitle}' VerticalAlignment="Center" Foreground="#3e4b5b" FontFamily="ubuntu-medium" FontSize="14" FontWeight="Medium"></TextBlock>
-                                <iconPacks:PackIconMaterial Kind="ChevronLeft" Grid.Column="1" Foreground="#9e9da0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="8" Visibility='{Binding SubItemArrowVisibility}'></iconPacks:PackIconMaterial>
-                                <iconPacks:PackIconMaterial Kind='{Binding NavItemIconKind}' Grid.Column="2" Foreground="#bba8bf" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="16"></iconPacks:PackIconMaterial>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
+
+            <ItemsControl ItemsSource="{Binding NavBarItems}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel></StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="188" Height="56" Background="Transparent" Cursor="Hand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="18"></ColumnDefinition>
+                                <ColumnDefinition Width="18"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0"  Text='{Binding NavItemNameTitle}' VerticalAlignment="Center" Foreground="#3e4b5b" FontFamily="ubuntu-regular" FontSize="14"></TextBlock>
+                            <iconPacks:PackIconMaterial Kind="ChevronLeft" Grid.Column="1" Foreground="#9e9da0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="6" Visibility='{Binding SubItemArrowVisibility}'></iconPacks:PackIconMaterial>
+                            <iconPacks:PackIconMaterial Kind='{Binding NavItemIconKind}' Grid.Column="2" Foreground="#bba8bf" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="18"></iconPacks:PackIconMaterial>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </Grid>
     </Grid>
 </UserControl>

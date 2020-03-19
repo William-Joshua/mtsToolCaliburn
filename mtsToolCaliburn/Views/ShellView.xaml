@@ -66,6 +66,9 @@
                 </StackPanel>
                 <DockPanel  Grid.Column="1">
                     <Grid Width="54" DockPanel.Dock="Right"  Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action PowerOff()]">
+                        <iconPacks:PackIconMaterial Kind="FormatLineSpacing" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"    Foreground="#9c9fa6"  Name="Spacing"  ></iconPacks:PackIconMaterial>
+                    </Grid>
+                    <Grid Width="54" DockPanel.Dock="Right"  Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action PowerOff()]">
                         <iconPacks:PackIconMaterial Kind="Power" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"    Foreground="#9c9fa6"  Name="Power"  ></iconPacks:PackIconMaterial>
                     </Grid>
                     <Grid Width="54" DockPanel.Dock="Right" Background="Transparent" >
@@ -104,15 +107,17 @@
                 </DockPanel>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="260" />
-                <ColumnDefinition Width ="*" />
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <ContentControl x:Name="NavBarItem"></ContentControl>
+        <ScrollViewer  Grid.Row="1" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="260" />
+                    <ColumnDefinition Width ="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <ContentControl x:Name="NavBarItem"></ContentControl>
+                </Grid>
+                <ContentControl x:Name="ActiveItem" Grid.Row="1" Grid.Column="1"></ContentControl>
             </Grid>
-            <ContentControl x:Name="ActiveItem" Grid.Row="1" Grid.Column="1"></ContentControl>
-        </Grid>
+        </ScrollViewer>
     </Grid>
 </controls:MetroWindow>
