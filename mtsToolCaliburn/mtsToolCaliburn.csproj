@@ -148,6 +148,7 @@
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="IShell.cs" />
+    <Compile Include="Models\NavigateItemMenu.cs" />
     <Compile Include="Models\NavigateMenusRootObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -164,7 +165,6 @@
     </Compile>
     <Compile Include="ViewModels\Components\LoginUserCardViewModel.cs" />
     <Compile Include="ViewModels\Components\NavigateBarViewModel.cs" />
-    <Compile Include="ViewModels\Components\NavigateItemViewModel.cs" />
     <Compile Include="ViewModels\Components\UserBusinessCardViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomePageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SignInViewModel.cs" />
@@ -192,10 +192,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\NavigateBarView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Components\NavigateItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
