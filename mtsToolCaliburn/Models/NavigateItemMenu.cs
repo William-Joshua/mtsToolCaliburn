@@ -13,12 +13,37 @@ namespace mtsToolCaliburn.Models
         public string NavItemNameTitle { get; set; }
         public Visibility SubItemArrowVisibility { get; set; }
         public PackIconMaterialKind NavItemIconKind { get; set; }
+        public string NavItemUrlPage { get; set; } = string.Empty; // 转换为Pages
+
+        public List<NavigateSubItemMenu> NavigateSubMenuItems { get; set; }
 
         public NavigateItemMenu(NavigateMenuItem navigateMenuItem)
         {
             NavItemNameTitle = navigateMenuItem.title;
             SubItemArrowVisibility = navigateMenuItem.subArrow == true ? Visibility.Visible : Visibility.Hidden;
             NavItemIconKind = navigateMenuItem.iconType;
+            NavItemUrlPage = navigateMenuItem.url;
+
+            if(navigateMenuItem.subArrow == true)
+            {
+                NavigateSubMenuItems = new List<NavigateSubItemMenu>();
+                foreach (NavigateSubMenuItem navigateSubMenuItem in navigateMenuItem.submenus.submenu)
+                {
+                    NavigateSubMenuItems.Add(new  NavigateSubItemMenu(navigateSubMenuItem));
+                }
+            }
+        }
+    }
+
+    public class NavigateSubItemMenu
+    {
+        public string NavSubItemNameTitle { get; set; }
+        public string NavSubItemUrlPage { get; set; } = string.Empty; // 转换为Pages
+
+        public NavigateSubItemMenu(NavigateSubMenuItem navigateSubMenuItem)
+        {
+            NavSubItemNameTitle = navigateSubMenuItem.title;
+            NavSubItemUrlPage = navigateSubMenuItem.url;
         }
     }
 }
