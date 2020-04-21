@@ -28,37 +28,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Width="188" Height="56" Background="Transparent" Cursor="Hand" >
-                            <ListBoxItem>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="18"></ColumnDefinition>
-                                        <ColumnDefinition Width="18"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"  Text='{Binding NavItemNameTitle}' VerticalAlignment="Center" Foreground="#3e4b5b" FontFamily="ubuntu-regular" FontSize="14"></TextBlock>
-                                    <iconPacks:PackIconMaterial Kind="ChevronLeft" Grid.Column="1" Foreground="#9e9da0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="6" Visibility='{Binding SubItemArrowVisibility}'>
-                                    </iconPacks:PackIconMaterial>
-                                    <iconPacks:PackIconMaterial Kind='{Binding NavItemIconKind}' Grid.Column="2" Foreground="#bba8bf" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="18"></iconPacks:PackIconMaterial>
-                                </Grid>
-                            </ListBoxItem>
-                            <Expander HorizontalAlignment="Right" Background="{x:Null}" IsExpanded="False" x:Name="NavItemSubExpander">
-                                <ListView ItemsSource='{Binding NavigateSubMenuItems}' ScrollViewer.HorizontalScrollBarVisibility="Disabled"> 
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="18"></ColumnDefinition>
-                                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                                </Grid.ColumnDefinitions>
-                                                <iconPacks:PackIconMaterial Kind="ArrowRightThick"  Grid.Column="0" Foreground="#9e9da0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="6"></iconPacks:PackIconMaterial>
-                                                <TextBlock Grid.Column="1"  Text='{Binding NavSubItemNameTitle}' VerticalAlignment="Center" Foreground="#3e4b5b" FontFamily="ubuntu-regular" FontSize="14"></TextBlock>
-                                            </Grid>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-                            </Expander>
-                        </Grid>
+                        <local:NavigateBarItemView />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

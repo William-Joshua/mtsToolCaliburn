@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="mtsToolCaliburn.Views.Components.NavigateBarItemView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:cal="http://www.caliburnproject.org" 
+             xmlns:local="clr-namespace:mtsToolCaliburn.Views.Components"
+             mc:Ignorable="d">
+    <Grid Width="188"  Background="Transparent" Cursor="Hand" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="18"></ColumnDefinition>
+                    <ColumnDefinition Width="18"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"  Text='{Binding NavItemNameTitle}' VerticalAlignment="Center" Foreground="#3e4b5b" FontFamily="ubuntu-regular" FontSize="14"></TextBlock>
+            <iconPacks:PackIconMaterial Grid.Column="1" Kind="ChevronLeft"  Foreground="#9e9da0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="6" Visibility='{Binding SubItemArrowVisibility}'>
+            </iconPacks:PackIconMaterial>
+            <iconPacks:PackIconMaterial Kind='{Binding NavItemIconKind}' Grid.Column="2" Foreground="#bba8bf" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="18"></iconPacks:PackIconMaterial>
+            </Grid>
+        <Grid Grid.Row="1">
+            <ItemsControl x:Name="SubMenuItem" ItemsSource='{Binding NavigateSubMenuItems}' Visibility="Visible">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel></StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="37">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="18"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <iconPacks:PackIconMaterial Kind="ArrowRightThick"  Grid.Column="0" Foreground="#9e9da0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="6"></iconPacks:PackIconMaterial>
+                            <TextBlock Grid.Column="1"  Text='{Binding NavSubItemNameTitle}' VerticalAlignment="Center" Foreground="#3e4b5b" FontFamily="ubuntu-regular" FontSize="14"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </Grid>
+</UserControl>
