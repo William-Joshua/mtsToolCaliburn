@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using MahApps.Metro.IconPacks;
 using mtsToolCaliburn.Models;
 using Newtonsoft.Json;
 using System;
@@ -33,6 +34,21 @@ namespace mtsToolCaliburn.ViewModels.Components
                 NavigateItemMenu navigateItemViewModel = new NavigateItemMenu(NavigateMenu);
                 NavBarItems.Add(new NavigateItemMenu(NavigateMenu));
             }
+        }
+        
+        public void VisibleSubMenuItems(NavigateItemMenu navigateItemViewModel)
+        {
+            if (navigateItemViewModel.SubItemArrowKind == PackIconMaterialKind.ChevronLeft)
+            {
+                navigateItemViewModel.SubItemArrowKind = PackIconMaterialKind.ChevronDown;
+                navigateItemViewModel.SubItemVisibility = Visibility.Visible;
+            }
+            else
+            {
+                navigateItemViewModel.SubItemArrowKind = PackIconMaterialKind.ChevronLeft;
+                navigateItemViewModel.SubItemVisibility = Visibility.Collapsed;
+            }
+
         }
     }
 }

@@ -43,7 +43,7 @@
                     <Grid>
                         <TextBox Width="180" BorderThickness="0" VerticalAlignment="Center">
                             <TextBox.Resources>
-                                <VisualBrush x:Key="HintText" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                                <VisualBrush x:Key="HintText"  Opacity="0.5" Stretch="None"  AlignmentX="Left">
                                     <VisualBrush.Visual>
                                         <TextBlock Text="Search projects"  FontFamily="ubuntu-regular" FontSize="14"  Foreground="#495057" />
                                     </VisualBrush.Visual>

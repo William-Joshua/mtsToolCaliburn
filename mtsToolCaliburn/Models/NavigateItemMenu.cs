@@ -13,6 +13,8 @@ namespace mtsToolCaliburn.Models
         public string NavItemNameTitle { get; set; }
         public Visibility SubItemArrowVisibility { get; set; }
         public PackIconMaterialKind NavItemIconKind { get; set; }
+        public PackIconMaterialKind SubItemArrowKind { get; set; } 
+        public Visibility SubItemVisibility { get; set; } 
         public string NavItemUrlPage { get; set; } = string.Empty; // 转换为Pages
 
         public List<NavigateSubItemMenu> NavigateSubMenuItems { get; set; }
@@ -20,8 +22,10 @@ namespace mtsToolCaliburn.Models
         public NavigateItemMenu(NavigateMenuItem navigateMenuItem)
         {
             NavItemNameTitle = navigateMenuItem.title;
-            SubItemArrowVisibility = navigateMenuItem.subArrow == true ? Visibility.Visible : Visibility.Hidden;
+            SubItemArrowKind = PackIconMaterialKind.ChevronLeft;
+            SubItemArrowVisibility = navigateMenuItem.subArrow == true ? Visibility.Visible : Visibility.Collapsed;
             NavItemIconKind = navigateMenuItem.iconType;
+            SubItemVisibility = Visibility.Collapsed;
             NavItemUrlPage = navigateMenuItem.url;
 
             if(navigateMenuItem.subArrow == true)
