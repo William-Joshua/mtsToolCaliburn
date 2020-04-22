@@ -44,7 +44,7 @@ namespace mtsToolCaliburn.ViewModels.Components
                 NotifyOfPropertyChange(() => SubItemVisibility);
             }
         }
-
+        
         public int _subItemArrowKindSize = 6;
         public int SubItemArrowKindSize
         {

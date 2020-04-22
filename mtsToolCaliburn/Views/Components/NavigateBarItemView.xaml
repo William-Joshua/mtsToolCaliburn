@@ -13,7 +13,7 @@
             <RowDefinition Height="56"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Background="Transparent"  cal:Message.Attach="[Event MouseLeftButtonDown] = [Action Navigate2Screen($dataContext)]">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="18"></ColumnDefinition>
@@ -35,7 +35,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Height="37">
+                        <Grid Height="37" Background="Transparent" cal:Message.Attach="[Event MouseLeftButtonDown] = [Action Navigate2Screen($dataContext)]"> 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="18"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>

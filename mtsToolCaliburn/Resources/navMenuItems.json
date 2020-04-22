@@ -3,13 +3,13 @@
     {
         "menu":
         [
-            {
-                "name" : "dashboard",
-                "title" : "Dashboard",
-                "iconType" : "Home",
-                "url" : "",
-                "subArrow" : false
-            },
+          {
+            "name": "dashboard",
+            "title": "Dashboard",
+            "iconType": "Home",
+            "url": "Pages.DashboardPageViewModel",
+            "subArrow": false
+          },
             {
                 "name" : "basic_ui_elements",
                 "title" : "Basic UI Elements",
@@ -20,11 +20,11 @@
                 {
                     "submenu":
                     [
-                        {
-                            "name" : "buttons",
-                            "title" : "Buttons",
-                            "url" : ""
-                        },
+                      {
+                        "name": "buttons",
+                        "title": "Buttons",
+                        "url": "Pages.ButtonsPageViewModel"
+                      },
                         {
                             "name" : "typography",
                             "title" : "Typography",

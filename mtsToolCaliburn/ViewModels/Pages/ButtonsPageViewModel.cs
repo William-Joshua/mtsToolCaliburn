@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace mtsToolCaliburn.ViewModels.Pages
 {
-    public class HomePageViewModel: Screen
+    public class ButtonsPageViewModel : Screen
     {
     }
 }

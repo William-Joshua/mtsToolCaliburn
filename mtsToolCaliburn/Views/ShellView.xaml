@@ -116,7 +116,7 @@
                 <Grid Grid.Column="0">
                     <ContentControl x:Name="NavBarItem"></ContentControl>
                 </Grid>
-                <ContentControl x:Name="ActiveItem" Grid.Row="1" Grid.Column="1"></ContentControl>
+                <ContentControl x:Name="MainWindow" Grid.Row="1" Grid.Column="1"></ContentControl>
             </Grid>
         </ScrollViewer>
     </Grid>
