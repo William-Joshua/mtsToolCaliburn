@@ -15,10 +15,10 @@ namespace mtsToolCaliburn.ViewModels.Components
     public class NavigateBarViewModel : PropertyChangedBase
     {
         private string navMenuItemsAddr = string.Format("{0}/Resources/navMenuItems.json", Environment.CurrentDirectory);
-
+       
         public UserBusinessCardViewModel UserBussinessCard { get; }
-
-        public List<NavigateItemMenu> NavBarItems { get; } = new List<NavigateItemMenu>();
+        
+        public List<NavigateBarItemViewModel> NavBarItems { get; set; } = new List<NavigateBarItemViewModel>();
         public NavigateBarViewModel()
         {
             NavigateMenusRootObject NavigateMenus = new NavigateMenusRootObject();
@@ -31,24 +31,11 @@ namespace mtsToolCaliburn.ViewModels.Components
             UserBussinessCard = new UserBusinessCardViewModel();
             foreach(var NavigateMenu in NavigateMenus.menus.menu)
             {
-                NavigateItemMenu navigateItemViewModel = new NavigateItemMenu(NavigateMenu);
-                NavBarItems.Add(new NavigateItemMenu(NavigateMenu));
+                NavigateBarItemViewModel navigateItemViewModel = new NavigateBarItemViewModel(NavigateMenu);
+                NavBarItems.Add(new NavigateBarItemViewModel(NavigateMenu));
             }
         }
-        
-        public void VisibleSubMenuItems(NavigateItemMenu navigateItemViewModel)
-        {
-            if (navigateItemViewModel.SubItemArrowKind == PackIconMaterialKind.ChevronLeft)
-            {
-                navigateItemViewModel.SubItemArrowKind = PackIconMaterialKind.ChevronDown;
-                navigateItemViewModel.SubItemVisibility = Visibility.Visible;
-            }
-            else
-            {
-                navigateItemViewModel.SubItemArrowKind = PackIconMaterialKind.ChevronLeft;
-                navigateItemViewModel.SubItemVisibility = Visibility.Collapsed;
-            }
 
-        }
+        
     }
 }

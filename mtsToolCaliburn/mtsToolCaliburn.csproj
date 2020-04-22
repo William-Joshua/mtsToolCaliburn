@@ -148,7 +148,6 @@
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="IShell.cs" />
-    <Compile Include="Models\NavigateItemMenu.cs" />
     <Compile Include="Models\NavigateMenusRootObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -164,6 +163,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\Components\LoginUserCardViewModel.cs" />
+    <Compile Include="ViewModels\Components\NavigateBarItemViewModel.cs" />
     <Compile Include="ViewModels\Components\NavigateBarViewModel.cs" />
     <Compile Include="ViewModels\Components\UserBusinessCardViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomePageViewModel.cs" />
