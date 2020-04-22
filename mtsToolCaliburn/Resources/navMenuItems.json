@@ -76,11 +76,11 @@
                             "title" : "Blank Page",
                             "url" : ""
                         },
-                        {
-                            "name" : "login",
-                            "title" : "Login",
-                            "url" : ""
-                        },
+                      {
+                        "name": "login",
+                        "title": "Login",
+                        "url": "Pages.LoginPageViewModel"
+                      },
                         {
                             "name" : "register",
                             "title" : "Register",

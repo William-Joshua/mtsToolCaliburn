@@ -168,6 +168,7 @@
     <Compile Include="ViewModels\Components\UserBusinessCardViewModel.cs" />
     <Compile Include="ViewModels\Pages\ButtonsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\DashboardPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SignInViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\Components\NavigateBarItemView.xaml.cs">
@@ -208,6 +209,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\ButtonsPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\LoginPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
