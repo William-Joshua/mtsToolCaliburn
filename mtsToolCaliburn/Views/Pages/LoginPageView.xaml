@@ -7,8 +7,8 @@
              xmlns:local="clr-namespace:mtsToolCaliburn.Views.Pages"
              mc:Ignorable="d" >
     <Grid Background="#f2edf3">
-        <Grid Width="464" Height="586" Background="#ffffff">
-            <Grid Width="334" Height="490">
+        <Grid Width="420" Height="586" Background="#ffffff">
+            <Grid Width="288" Height="490">
                 <StackPanel >
                     <Grid Height="33" Margin="0 0 0 32">
                         <Image  Name="purpleLogo"  HorizontalAlignment="Left" Source="pack://SiteOfOrigin:,,,/Resources/Images/logo.png" Width="140" Height="28"  RenderOptions.BitmapScalingMode="HighQuality"></Image>
