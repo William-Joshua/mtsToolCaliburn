@@ -16,7 +16,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <!-- Purple Theme Style -->
-                <ResourceDictionary Source="pack://application:,,,/Views/Template/GlobalTemplateDict.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/GlobalTemplateDict.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

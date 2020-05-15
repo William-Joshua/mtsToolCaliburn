@@ -8,97 +8,106 @@
             "title": "Dashboard",
             "iconType": "Home",
             "url": "Pages.DashboardPageViewModel",
+            "master": false,
             "subArrow": false
           },
-            {
-                "name" : "basic_ui_elements",
-                "title" : "Basic UI Elements",
-                "iconType" : "CrosshairsGps",
-                "url" : "",
-                "subArrow" : true,
-                "submenus":
+          {
+            "name": "basic_ui_elements",
+            "title": "Basic UI Elements",            "iconType": "CrosshairsGps",
+            "url": "",
+            "master": false,
+            "subArrow": true,
+            "submenus": {
+              "submenu": [
                 {
-                    "submenu":
-                    [
-                      {
-                        "name": "buttons",
-                        "title": "Buttons",
-                        "url": "Pages.ButtonsPageViewModel"
-                      },
-                        {
-                            "name" : "typography",
-                            "title" : "Typography",
-                            "url" : ""
-                        }
-                    ]
-                }
-            },
-            {
-                "name" : "icons",
-                "title" : "Icons",
-                "iconType" : "Contacts",
-                "url" : "",
-                "subArrow" : false
-            },
-            {
-                "name" : "forms",
-                "title" : "Forms",
-                "iconType" : "FormatListBulleted",
-                "url" : "",
-                "subArrow" : false
-            },
-            {
-                "name" : "charts",
-                "title" : "Charts",
-                "iconType" : "ChartBar",
-                "url" : "",
-                "subArrow" : false
-            },
-            {
-                "name" : "tables",
-                "title" : "Tables",
-                "iconType" : "TableLarge",
-                "url" : "",
-                "subArrow" : false
-            },
-            {
-                "name" : "sample_pages",
-                "title" : "Sample Pages",
-                "iconType" : "MedicalBag",
-                "url" : "",
-                "subArrow" : true,
-                "submenus":
+                  "name": "buttons",
+                  "title": "Buttons",
+                  "url": "Pages.ButtonsPageViewModel",
+                  "master": true
+                },
                 {
-                    "submenu":
-                    [
-                        {
-                            "name" : "blank_page",
-                            "title" : "Blank Page",
-                            "url" : ""
-                        },
-                      {
-                        "name": "login",
-                        "title": "Login",
-                        "url": "Pages.LoginPageViewModel"
-                      },
-                        {
-                            "name" : "register",
-                            "title" : "Register",
-                            "url" : ""
-                        },
-                        {
-                            "name" : "_404",
-                            "title" : "404",
-                            "url" : ""
-                        },
-                        {
-                            "name" : "_500",
-                            "title" : "500",
-                            "url" : ""
-                        }
-                    ]
+                  "name": "typography",
+                  "title": "Typography",
+                  "url": "",
+                  "master": true
                 }
+              ]
             }
+          },
+          {
+            "name": "icons",
+            "title": "Icons",
+            "iconType": "Contacts",
+            "url": "",
+            "master": true,
+            "subArrow": false
+          },
+          {
+            "name": "forms",
+            "title": "Forms",
+            "iconType": "FormatListBulleted",
+            "url": "",
+            "master": true,
+            "subArrow": false
+          },
+          {
+            "name": "charts",
+            "title": "Charts",
+            "iconType": "ChartBar",
+            "url": "",
+            "master": true,
+            "subArrow": false
+          },
+          {
+            "name": "tables",
+            "title": "Tables",
+            "iconType": "TableLarge",
+            "url": "",
+            "master": true,
+            "subArrow": false
+          },
+          {
+            "name": "sample_pages",
+            "title": "Sample Pages",
+            "iconType": "MedicalBag",
+            "url": "",
+            "master": true,
+            "subArrow": true,
+            "submenus": {
+              "submenu": [
+                {
+                  "name": "blank_page",
+                  "title": "Blank Page",
+                  "url": "",
+                  "master": true
+                },
+                {
+                  "name": "login",
+                  "title": "Login",
+                  "url": "Pages.LoginPageViewModel",
+                  "master": false
+                },
+                {
+                  "name": "register",
+                  "title": "Register",
+                  "url": "",
+                  "master": false
+                },
+                {
+                  "name": "_404",
+                  "title": "404",
+                  "url": "",
+                  "master": false
+                },
+                {
+                  "name": "_500",
+                  "title": "500",
+                  "url": "",
+                  "master": false
+                }
+              ]
+            }
+          }
         ]
     }
 }

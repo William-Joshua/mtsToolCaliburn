@@ -35,7 +35,5 @@ namespace mtsToolCaliburn.ViewModels.Components
                 NavBarItems.Add(new NavigateBarItemViewModel(NavigateMenu));
             }
         }
-
-        
     }
 }

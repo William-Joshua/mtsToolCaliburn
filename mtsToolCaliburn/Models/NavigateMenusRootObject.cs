@@ -24,6 +24,7 @@ namespace mtsToolCaliburn.Models
         public string title { get; set; }
         public PackIconMaterialKind iconType { get; set; }
         public string url { get; set; }
+        public bool master { get; set; }
         public Boolean subArrow { get; set; }
 
         public NavigateSubMenuModel submenus { get; set; }
@@ -40,5 +41,6 @@ namespace mtsToolCaliburn.Models
         public string name { get; set; }
         public string title { get; set; }
         public string url { get; set; }
+        public bool master { get; set; }
     }
 }

@@ -3,8 +3,10 @@ using System.ComponentModel.Composition;
 using System.Windows;
 using Caliburn.Micro;
 using MahApps.Metro.IconPacks;
+using mtsToolCaliburn.Commons;
 using mtsToolCaliburn.ViewModels.Components;
 using mtsToolCaliburn.ViewModels.Pages;
+using mtsToolCaliburn.ViewModels.Templates;
 
 namespace mtsToolCaliburn {
     [Export(typeof(IShell))]
@@ -45,9 +47,19 @@ namespace mtsToolCaliburn {
             {
                 if (navigateBarItemViewModel.NavItemUrlPage == string.Empty)
                     return;
-                Type  type = Type.GetType(GetScreenFullPageUrlClass(navigateBarItemViewModel.NavItemUrlPage));
-                Screen screen = System.Activator.CreateInstance(type) as Screen;
-                MainWindow = screen;
+                if(!navigateBarItemViewModel.NavPageEnableMasterTemplate)
+                {
+                    Type type = Type.GetType(GlobalSolutionCenter.GetScreenFullPageUrlClass(navigateBarItemViewModel.NavItemUrlPage));
+                    Screen screen = System.Activator.CreateInstance(type) as Screen;
+                    MainWindow = screen;
+                    return;
+                }
+                PurpleGenericTemplateViewModel purpleGenericTemplateViewModel = new PurpleGenericTemplateViewModel();
+                purpleGenericTemplateViewModel.NavPageTitle = navigateBarItemViewModel.NavItemNameTitle;
+                purpleGenericTemplateViewModel.NavTabGroupName = navigateBarItemViewModel.NavItemNameTitle;
+                purpleGenericTemplateViewModel.NavPageUrlPage = navigateBarItemViewModel.NavItemUrlPage;
+
+                MainWindow = purpleGenericTemplateViewModel;
                 return;
             }
             NavigateSubItemMenu navigateSubItemMenu = sender as NavigateSubItemMenu;
@@ -55,19 +67,24 @@ namespace mtsToolCaliburn {
             {
                 if (navigateSubItemMenu.NavSubItemUrlPage == string.Empty)
                     return;
-                Type type = Type.GetType(GetScreenFullPageUrlClass(navigateSubItemMenu.NavSubItemUrlPage));
-
-                Screen screen = System.Activator.CreateInstance(type) as Screen;
-                MainWindow = screen;
+                if (!navigateSubItemMenu.NavPageEnableMasterTemplate)
+                {
+                    Type type = Type.GetType(GlobalSolutionCenter.GetScreenFullPageUrlClass(navigateSubItemMenu.NavSubItemUrlPage));
+                    Screen screen = System.Activator.CreateInstance(type) as Screen;
+                    MainWindow = screen;
+                    return;
+                }
+                PurpleGenericTemplateViewModel purpleGenericTemplateViewModel = new PurpleGenericTemplateViewModel();
+                purpleGenericTemplateViewModel.NavPageTitle = navigateSubItemMenu.NavSubItemNameTitle;
+                purpleGenericTemplateViewModel.NavTabGroupName = navigateSubItemMenu.NavParentGroupName;
+                purpleGenericTemplateViewModel.NavPageUrlPage = navigateSubItemMenu.NavSubItemUrlPage;
+                MainWindow = purpleGenericTemplateViewModel;
                 return;
             }
         }
 
 
-        public string GetScreenFullPageUrlClass(string viewModelPageUrl)
-        {
-            return string.Format("mtsToolCaliburn.ViewModels.{0}", viewModelPageUrl);
-        }
+      
 
         public void PowerOff()
         {

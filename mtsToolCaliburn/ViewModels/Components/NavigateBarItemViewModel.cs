@@ -16,6 +16,7 @@ namespace mtsToolCaliburn.ViewModels.Components
         public Visibility SubItemArrowVisibility { get; set; }
         public PackIconMaterialKind NavItemIconKind { get; set; }
         public string NavItemUrlPage { get; set; } = string.Empty; // 转换为Pages
+        public Boolean NavPageEnableMasterTemplate { get; set; }
         public List<NavigateSubItemMenu> NavigateSubMenuItems { get; set; }
         public PackIconMaterialKind _subItemArrowKind = PackIconMaterialKind.ChevronLeft;
         public PackIconMaterialKind SubItemArrowKind
@@ -65,13 +66,14 @@ namespace mtsToolCaliburn.ViewModels.Components
             SubItemArrowVisibility = navigateMenuItem.subArrow == true ? Visibility.Visible : Visibility.Collapsed;
             NavItemIconKind = navigateMenuItem.iconType;
             NavItemUrlPage = navigateMenuItem.url;
+            NavPageEnableMasterTemplate = navigateMenuItem.master;
 
             if (navigateMenuItem.subArrow == true)
             {
                 NavigateSubMenuItems = new List<NavigateSubItemMenu>();
                 foreach (NavigateSubMenuItem navigateSubMenuItem in navigateMenuItem.submenus.submenu)
                 {
-                    NavigateSubMenuItems.Add(new NavigateSubItemMenu(navigateSubMenuItem));
+                    NavigateSubMenuItems.Add(new NavigateSubItemMenu(navigateMenuItem, navigateSubMenuItem));
                 }
             }
         }
@@ -96,12 +98,17 @@ namespace mtsToolCaliburn.ViewModels.Components
     public class NavigateSubItemMenu
     {
         public string NavSubItemNameTitle { get; set; }
+        public string NavParentGroupName { get; set; }
         public string NavSubItemUrlPage { get; set; } = string.Empty; // 转换为Pages
+        public Boolean NavPageEnableMasterTemplate { get; set; }
 
-        public NavigateSubItemMenu(NavigateSubMenuItem navigateSubMenuItem)
+        public NavigateSubItemMenu(NavigateMenuItem navigateMenuItem,NavigateSubMenuItem navigateSubMenuItem)
         {
+            
             NavSubItemNameTitle = navigateSubMenuItem.title;
+            NavParentGroupName = navigateMenuItem.title;
             NavSubItemUrlPage = navigateSubMenuItem.url;
+            NavPageEnableMasterTemplate = navigateSubMenuItem.master;
         }
     }
 }

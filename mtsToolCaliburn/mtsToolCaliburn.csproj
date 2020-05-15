@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Commons\GlobalSolutionCenter.cs" />
     <Compile Include="IShell.cs" />
     <Compile Include="Models\NavigateMenusRootObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -201,6 +202,7 @@
     <Compile Include="ViewModels\Pages\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SignInViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\Templates\PurpleGenericTemplateViewModel.cs" />
     <Compile Include="Views\Components\NavigateBarItemView.xaml.cs">
       <DependentUpon>NavigateBarItemView.xaml</DependentUpon>
     </Compile>
@@ -249,7 +251,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Template\GlobalTemplateDict.xaml">
+    <Page Include="Views\Templates\PurpleGenericTemplateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Templates\GlobalTemplateDict.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
