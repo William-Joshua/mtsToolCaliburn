@@ -2,6 +2,7 @@ namespace mtsToolCaliburn {
     using System;
     using System.Collections.Generic;
     using Caliburn.Micro;
+    using mtsToolCaliburn.ViewModels.Pages;
 
     public class AppBootstrapper : BootstrapperBase {
         SimpleContainer container;
@@ -15,6 +16,7 @@ namespace mtsToolCaliburn {
 
             container.Singleton<IWindowManager, WindowManager>();
             container.Singleton<IEventAggregator, EventAggregator>();
+            container.PerRequest<ILoginPage, LoginPageViewModel>();
             container.PerRequest<IShell, ShellViewModel>();
         }
 
@@ -31,7 +33,7 @@ namespace mtsToolCaliburn {
         }
 
         protected override void OnStartup(object sender, System.Windows.StartupEventArgs e) {
-            DisplayRootViewFor<IShell>();
+            DisplayRootViewFor<ILoginPage>();
         }
     }
 }
