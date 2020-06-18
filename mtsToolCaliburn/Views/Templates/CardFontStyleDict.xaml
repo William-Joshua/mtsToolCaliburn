@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:mtsToolCaliburn.Views.Templates">
+    <Style x:Key="card-title" TargetType="Label">
+        <Setter Property="FontFamily" Value="ubuntu-medium"></Setter>
+        <Setter Property="FontSize" Value="18px"></Setter>
+        <Setter Property="Foreground" Value="#343a40"></Setter>
+        <Setter Property="FontWeight" Value="DemiBold"></Setter>
+    </Style>
+    <Style x:Key="card-description" TargetType="Label">
+        <Setter Property="FontFamily" Value="ubuntu-regular"></Setter>
+        <Setter Property="FontSize" Value="15px"></Setter>
+        <Setter Property="Foreground" Value="#76838f"></Setter>
+        <Setter Property="FontWeight" Value="Light"></Setter>
+    </Style>
+</ResourceDictionary>

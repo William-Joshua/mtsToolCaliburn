@@ -17,6 +17,10 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <!-- Purple Theme Style -->
                 <ResourceDictionary Source="pack://application:,,,/Views/Templates/GlobalTemplateDict.xaml" />
+                <!-- Button UI Style -->
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/ButtonsUIStyleDict.xaml" />
+                <!-- Card Font Style -->
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/CardFontStyleDict.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

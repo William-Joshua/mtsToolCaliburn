@@ -1,3 +1,6 @@
-namespace mtsToolCaliburn {
-    public interface IShell {}
+﻿namespace mtsToolCaliburn
+{
+    public interface IShell
+    {
+    }
 }

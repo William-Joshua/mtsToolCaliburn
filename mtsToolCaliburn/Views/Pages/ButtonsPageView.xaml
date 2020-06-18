@@ -8,27 +8,38 @@
       mc:Ignorable="d" 
        d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Border Margin="5" Grid.Column="0" Background="#FFD4E436" VerticalAlignment="Stretch" CornerRadius="12">
+        <StackPanel Orientation="Vertical">
+            <Border Style="{StaticResource container}">
+                <StackPanel Margin="10">
+                    <Label Style="{StaticResource card-title}" Content="Gradient Buttons"></Label>
+                    <Label Style="{StaticResource card-description}" Content="Add class .btn-gradient-{color} for gradient buttons"></Label>
 
-        </Border>
-        <Border Margin="5" Grid.Column="1" Background="#FF81F9FF" VerticalAlignment="Stretch" CornerRadius="12">
-
-        </Border>
-        <Border Margin="5" Grid.Column="2" Background="#FF144BC3" VerticalAlignment="Stretch" CornerRadius="12">
-
-        </Border>
-        <Border Margin="5" Grid.Column="3" Background="#FFD34EBA" VerticalAlignment="Stretch" CornerRadius="12">
-
-        </Border>
+                    <WrapPanel>
+                        <Button Style="{StaticResource btn-gradient-primary}" Content="Primary" Margin="5 0" Width="150" Height="42" ></Button>
+                        <Button Style="{StaticResource btn-gradient-secondary}" Content="Secondary" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-success}" Content="Success" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-danger}" Content="Danger" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-warning}" Content="Warning" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-info}" Content="Info" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-light}" Content="Light" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-dark}" Content="Dark" Margin="5 0"  ></Button>
+                    </WrapPanel>
+                    <Label Style="{StaticResource card-title}" Content="Rounded Buttons"></Label>
+                    <Label Style="{StaticResource card-description}" Content="Add class .btn-rounded"></Label>
+            
+                    <WrapPanel>
+                        <Button Style="{StaticResource btn-gradient-rounded-primary}" Content="Primary" Margin="5 0" ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-secondary}" Content="Secondary" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-success}" Content="Success" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-danger}" Content="Danger" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-warning}" Content="Warning" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-info}" Content="Info" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-light}" Content="Light" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-rounded-dark}" Content="Dark" Margin="5 0"  ></Button>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+        
+        </StackPanel>
     </Grid>
 </UserControl>
