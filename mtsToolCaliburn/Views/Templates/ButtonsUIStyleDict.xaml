@@ -35,7 +35,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#e7ebf0" Offset="0"></GradientStop>
@@ -63,7 +63,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#84d9d2" Offset="0"></GradientStop>
@@ -91,7 +91,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#ffbf96" Offset="0"></GradientStop>
@@ -119,7 +119,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f6e384" Offset="0"></GradientStop>
@@ -142,11 +142,12 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style  x:Key="btn-gradient-info" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#90caf9" Offset="0"></GradientStop>
@@ -174,14 +175,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f4f4f4" Offset="0"></GradientStop>
-                                <GradientStop Color="#f4f4f4" Offset="1"></GradientStop>
+                                <GradientStop Color="#e4e4e9" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -202,7 +203,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#5e7188" Offset="0"></GradientStop>
@@ -230,7 +231,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#da8cff" Offset="0"></GradientStop>
@@ -258,7 +259,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#e7ebf0" Offset="0"></GradientStop>
@@ -286,7 +287,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#84d9d2" Offset="0"></GradientStop>
@@ -314,7 +315,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#ffbf96" Offset="0"></GradientStop>
@@ -342,7 +343,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f6e384" Offset="0"></GradientStop>
@@ -365,11 +366,12 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style  x:Key="btn-gradient-rounded-info" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#90caf9" Offset="0"></GradientStop>
@@ -397,14 +399,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f4f4f4" Offset="0"></GradientStop>
-                                <GradientStop Color="#f4f4f4" Offset="1"></GradientStop>
+                                <GradientStop Color="#e4e4e9" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -425,7 +427,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="150" Height="42" >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#5e7188" Offset="0"></GradientStop>
@@ -449,4 +451,463 @@
         </Setter>
     </Style>
 
+    <Style  x:Key="btn-outline-primary" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#b66dff"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Setter Property="TextElement.Foreground" Value="#b66dff"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#da8cff" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#9a55ff" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="TextElement.Foreground" Value="#000000"></Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style  x:Key="btn-outline-secondary" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#c3bdbd"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Setter Property="TextElement.Foreground" Value="#c3bdbd"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#e7ebf0" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#868e96" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="TextElement.Foreground" Value="#000000"></Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-outline-success" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#1bcfb4"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Setter Property="TextElement.Foreground" Value="#1bcfb4"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#84d9d2" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#07cdae" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="TextElement.Foreground" Value="#000000"></Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-outline-danger" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#fe7c96"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Setter Property="TextElement.Foreground" Value="#fe7c96"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#ffbf96" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#fe7096" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="TextElement.Foreground" Value="#000000"></Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-outline-warning" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#fed713"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Setter Property="TextElement.Foreground" Value="#fed713"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#f6e384" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#ffd500" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="TextElement.Foreground" Value="#000000"></Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-outline-info" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#198ae3"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Setter Property="TextElement.Foreground" Value="#198ae3"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#90caf9" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#047edf " Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="TextElement.Foreground" Value="#000000"></Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-outline-light" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.Foreground="#000000"  TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#f8f9fa"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#f4f4f4" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#e4e4e9" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-outline-dark" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.Foreground="#000000"  TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#3e4b5b"></Setter>
+                                <Setter Property="Border.Background" Value="#ffffff"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#5e7188" Offset="0"></GradientStop>
+                                                    <GradientStop Color="#3e4b5b" Offset="1"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="Border.BorderBrush" Value="Transparent"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-primary" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#b66dff" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#9a55ff" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-secondary" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" Background="#c3bdbd"  BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Opacity" Value="0.8" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Opacity" Value="1" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-success" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#84d9d2" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#07cdae" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-danger" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#ffbf96" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#fe7096" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-warning" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#f6e384" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#ffd500" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-info" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#90caf9" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#047edf" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-light" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#f4f4f4" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#e4e4e9" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-dark" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Background" Value="#5e7188" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Background" Value="#3e4b5b" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="btn-inverse-primary" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border  CornerRadius="5" Background="#b66dff"   BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.Opacity" Value="0.2" />
+                                <Setter Property="TextElement.Foreground" Value="#b66dff" />
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.Opacity" Value="1" />
+                                        <Setter Property="TextElement.Foreground" Value="#ffffff" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
