@@ -69,18 +69,60 @@
 
                     <WrapPanel>
                         <Button Style="{StaticResource btn-inverse-primary}" Content="Primary" Margin="5 0" Width="150"  Height="42"  ></Button>
-                        <Button Style="{StaticResource btn-secondary}" Content="Secondary" Margin="5 0" Width="150"  Height="42"></Button>
-                        <Button Style="{StaticResource btn-success}" Content="Success" Margin="5 0" Width="150"  Height="42"></Button>
-                        <Button Style="{StaticResource btn-danger}" Content="Danger" Margin="5 0" Width="150"  Height="42"></Button>
-                        <Button Style="{StaticResource btn-warning}" Content="Warning" Margin="5 0" Width="150"  Height="42"></Button>
-                        <Button Style="{StaticResource btn-info}" Content="Info" Margin="5 0" Width="150"  Height="42"></Button>
-                        <Button Style="{StaticResource btn-light}" Content="Light" Margin="5 0" Width="150"  Height="42"></Button>
-                        <Button Style="{StaticResource btn-dark}" Content="Dark" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-secondary}" Content="Secondary" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-success}" Content="Success" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-danger}" Content="Danger" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-warning}" Content="Warning" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-info}" Content="Info" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-light}" Content="Light" Margin="5 0" Width="150"  Height="42"></Button>
+                        <Button Style="{StaticResource btn-inverse-dark}" Content="Dark" Margin="5 0" Width="150"  Height="42"></Button>
+                    </WrapPanel>
+
+                    <Label Style="{StaticResource card-title}" Content="Normal Buttons"></Label>
+                    <Label Style="{StaticResource card-description}" Content="Use any of the available button classes to quickly create a styled button."></Label>
+
+                    <WrapPanel>
+                        <Button Style="{StaticResource btn-gradient-primary}" Content="Primary" Margin="5 0" ></Button>
+                        <Button Style="{StaticResource btn-gradient-secondary}" Content="Secondary" Margin="5 0" ></Button>
+                        <Button Style="{StaticResource btn-gradient-success}" Content="Success" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-danger}" Content="Danger" Margin="5 0"  ></Button>
+                        <Button Style="{StaticResource btn-gradient-warning}" Content="Warning" Margin="5 0" ></Button>
+                        <Button Style="{StaticResource btn-gradient-info}" Content="Info" Margin="5 0" ></Button>
+                        <Button Style="{StaticResource btn-gradient-light}" Content="Light" Margin="5 0"></Button>
+                        <Button Style="{StaticResource btn-gradient-dark}" Content="Dark" Margin="5 0"></Button>
                     </WrapPanel>
                 </StackPanel>
 
             </Border>
-        
+
+            <Grid Margin="0 20 0 0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border Style="{StaticResource container}" Grid.Column="0" Margin="0 10 10 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="10">
+                            <Label Style="{StaticResource card-title}" Content="Icon Buttons"></Label>
+                            <Label Style="{StaticResource card-description}" Content="Add class .btn-icon for buttons with only icons"></Label>
+
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="10">
+                            <Label Style="{StaticResource card-title}" Content="Button Size"></Label>
+                            <Label Style="{StaticResource card-description}" Content="Use class .btn-{size}"></Label>
+
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Style="{StaticResource container}" Grid.Column="1" Margin="10 10 0 0">
+                    <StackPanel></StackPanel>
+                </Border>
+            </Grid>
         </StackPanel>
     </Grid>
 </UserControl>

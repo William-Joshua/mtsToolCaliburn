@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:mtsToolCaliburn.Views">
 
     <Style x:Key="container" TargetType="Border">
-        <Setter Property="CornerRadius" Value="6"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
         <Setter Property="BorderThickness" Value="1"></Setter>
         <Setter Property="Background" Value="#ffffff"></Setter>
     </Style>
