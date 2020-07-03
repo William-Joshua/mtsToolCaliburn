@@ -4,10 +4,9 @@
          xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
          xmlns:cal="http://www.caliburnproject.org" 
         Title="MTS Tools Console" TitleCharacterCasing="Normal"
-         GlowBrush="{DynamicResource AccentColorBrush}"
          WindowStartupLocation="CenterScreen" ShowTitleBar="False"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        IsCloseButtonEnabled="False" IsMinButtonEnabled="False" IsMaxRestoreButtonEnabled="False">
+         ShowCloseButton="False" ShowMinButton="False" ShowMaxRestoreButton="False">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"></RowDefinition>
