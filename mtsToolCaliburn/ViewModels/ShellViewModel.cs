@@ -82,9 +82,7 @@ namespace mtsToolCaliburn {
                 return;
             }
         }
-
-
-      
+        
 
         public void PowerOff()
         {

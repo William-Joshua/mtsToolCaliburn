@@ -6,7 +6,6 @@
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cal="http://www.caliburnproject.org" 
-             xmlns:local="clr-namespace:mtsToolCaliburn.Views.Components"
              mc:Ignorable="d">
     <Grid Width="188"  Background="Transparent" Cursor="Hand" >
         <Grid.RowDefinitions>
