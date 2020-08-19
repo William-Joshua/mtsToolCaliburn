@@ -20,6 +20,12 @@
                 <ResourceDictionary Source="pack://application:,,,/Views/Templates/ButtonsUIStyleDict.xaml" />
                 <!-- Card Font Style -->
                 <ResourceDictionary Source="pack://application:,,,/Views/Templates/CardFontStyleDict.xaml" />
+                <!-- Text Block UI Style -->
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/TextBlocksUIStyleDict.xaml" />
+                <!-- ComboBox UI Style -->
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/ComboBoxUIStyleDict.xaml" />
+                <!-- Table UI Style -->
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/TableUIStyleDict.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
