@@ -13,4 +13,9 @@
         <Setter Property="Foreground" Value="#76838f"></Setter>
         <Setter Property="FontWeight" Value="Light"></Setter>
     </Style>
+    <Style x:Key="body-text" TargetType="Label">
+        <Setter Property="FontFamily" Value="ubuntu-regular"></Setter>
+        <Setter Property="FontSize" Value="14px"></Setter>
+        <Setter Property="Foreground" Value="#343a40"></Setter>
+    </Style>
 </ResourceDictionary>

@@ -17,13 +17,11 @@
                 <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
                     <Grid Margin="2">
                         <Border x:Name="columnHeaderBorder"
-						        BorderThickness="0 0 0 1" BorderBrush="#aab2bd" Background="{x:Null}">
+						        BorderThickness="0 0 0 1" BorderBrush="#e6e9ed" Background="{x:Null}">
                             <DockPanel>
-                                <iconpacks:PackIconMaterial Kind="ArrowDown" DockPanel.Dock="Right" Width="8" Height="8"  VerticalAlignment="Center" Foreground="#aab2bd" Margin="1"></iconpacks:PackIconMaterial>
-                                <iconpacks:PackIconMaterial Kind="ArrowUp"  DockPanel.Dock="Right" Width="8" Height="8"   VerticalAlignment="Center" Foreground="#aab2bd" Margin="1"></iconpacks:PackIconMaterial>
-                                <ContentPresenter  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-							                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-							                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <iconpacks:PackIconMaterial Kind="ArrowDown" DockPanel.Dock="Right"  Width="8" Height="8"  VerticalAlignment="Center" Foreground="#e6e9ed" Margin="1 1 5 1"></iconpacks:PackIconMaterial>
+                                <iconpacks:PackIconMaterial Kind="ArrowUp"  DockPanel.Dock="Right" Width="8" Height="8"   VerticalAlignment="Center" Foreground="#e6e9ed" Margin="1"></iconpacks:PackIconMaterial>
+                                <ContentPresenter  HorizontalAlignment="Left" VerticalAlignment="Center" />
                             </DockPanel>
 
                         </Border>
@@ -33,33 +31,20 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type DataGridRow}">
-        <Setter Property="Background" Value="LightYellow" />
-        <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />
         <Setter Property="ValidationErrorTemplate">
             <Setter.Value>
                 <ControlTemplate>
-                    <TextBlock Margin="2,0,0,0"
-					           VerticalAlignment="Center"
-					           Foreground="Red"
-					           Text="!" />
+                    <!--<TextBlock Margin="2,0,0,0" VerticalAlignment="Center" Foreground="Red" Text="!" />-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridRow}">
-                    <Border x:Name="DGR_Border"
-					        BorderBrush="{TemplateBinding BorderBrush}"
-					        BorderThickness="{TemplateBinding BorderThickness}"
-					        SnapsToDevicePixels="True">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                <GradientStop Offset="0" Color="#AAFFFFAA" />
-                                <GradientStop Offset="1" Color="#AAFFD455" />
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <VisualStateManager.VisualStateGroups>
+                    <Border x:Name="DGR_Border" BorderBrush="{TemplateBinding BorderBrush}"
+					        BorderThickness="{TemplateBinding BorderThickness}" Background ="{TemplateBinding Background}">
+                        <!--<VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="Normal_AlternatingRow">
@@ -93,7 +78,7 @@
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
+                        </VisualStateManager.VisualStateGroups>-->
                         <SelectiveScrollingGrid>
                             <SelectiveScrollingGrid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
@@ -104,8 +89,7 @@
                                 <RowDefinition Height="Auto" />
                             </SelectiveScrollingGrid.RowDefinitions>
                             <DataGridCellsPresenter Grid.Column="1"
-							                        ItemsPanel="{TemplateBinding ItemsPanel}"
-							                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+							                        ItemsPanel="{TemplateBinding ItemsPanel}" />
                             <DataGridDetailsPresenter Grid.Row="1"
 							                          Grid.Column="1"
 							                          SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen,
@@ -113,12 +97,12 @@
 							                                                                                         Converter={x:Static DataGrid.RowDetailsScrollingConverter},
 							                                                                                         RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
 							                          Visibility="{TemplateBinding DetailsVisibility}" />
-                            <DataGridRowHeader Grid.RowSpan="2"
+                            <!--<DataGridRowHeader Grid.RowSpan="2"
 							                   SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
 							                   Visibility="{Binding HeadersVisibility,
 							                                        ConverterParameter={x:Static DataGridHeadersVisibility.Row},
 							                                        Converter={x:Static DataGrid.HeadersVisibilityConverter},
-							                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+							                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />-->
                         </SelectiveScrollingGrid>
                     </Border>
                 </ControlTemplate>
@@ -129,12 +113,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridCell}">
-                    <Border x:Name="border"
-					        Background="Transparent"
-					        BorderBrush="Transparent"
-					        BorderThickness="1"
-					        SnapsToDevicePixels="True">
-                        <VisualStateManager.VisualStateGroups>
+                    <Grid Height="58px">
+                        <!--<VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="FocusStates">
                                 <VisualState x:Name="Unfocused" />
                                 <VisualState x:Name="Focused" />
@@ -149,9 +129,12 @@
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                    </Border>
+                        </VisualStateManager.VisualStateGroups>-->
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#e6e9ed" Background="{x:Null}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" TextBlock.FontFamily="ubuntu-regular" TextBlock.FontSize="14px" />
+                        </Border>
+
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -247,18 +230,18 @@
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <StackPanel Orientation="Horizontal" Margin="10 5" Grid.Column="0">
-                                <Label Content="显示" VerticalAlignment="Center" ></Label>
+                                <Label Content="Show" Style="{StaticResource body-text}"  VerticalAlignment="Center" ></Label>
                                 <ComboBox Style="{StaticResource select-primary}"  Width="52">
                                     <ComboBoxItem>5</ComboBoxItem>
                                     <ComboBoxItem IsSelected="True">10</ComboBoxItem>
                                     <ComboBoxItem>15</ComboBoxItem>
                                     <ComboBoxItem>all</ComboBoxItem>
                                 </ComboBox>
-                                <Label Content="行" VerticalAlignment="Center" ></Label>
+                                <Label Content="entries" Style="{StaticResource body-text}" VerticalAlignment="Center" ></Label>
                             </StackPanel>
 
                             <Grid Margin="10 5" Grid.Column="1">
-                                <TextBox Style="{StaticResource tb-control-none}" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="搜索"></TextBox>
+                                <TextBox Style="{StaticResource textbox-primary}" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="Search"></TextBox>
                             </Grid>
                         </Grid>
                         <Grid Grid.Row="1">
@@ -340,12 +323,13 @@
                                 <ColumnDefinition Width="8*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <StackPanel Orientation="Horizontal" Grid.Column="0">
-                                <TextBlock Text="数据 : " FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text="{Binding tablePageStartNum}"  FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text=" ~ " FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text="{Binding tablePageEndNum}"  FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text=" 总计 :  " FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text="{Binding tablePageSum}"  FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
+                                <Label Content="Showing" Style="{StaticResource body-text}"></Label>
+                                <Label Content="{Binding tablePageStartNum}"  Style="{StaticResource body-text}"></Label>
+                                <Label Content=" to " Style="{StaticResource body-text}"></Label>
+                                <Label Content="{Binding tablePageEndNum}" Style="{StaticResource body-text}"></Label>
+                                <Label Content=" of  " Style="{StaticResource body-text}"></Label>
+                                <Label Content="{Binding tablePageSum}"  Style="{StaticResource body-text}"></Label>
+                                <Label Content=" entries " Style="{StaticResource body-text}"></Label>
                             </StackPanel>
                             <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" >
                                 <DockPanel>

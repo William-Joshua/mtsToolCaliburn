@@ -64,7 +64,17 @@
             "iconType": "TableLarge",
             "url": "",
             "master": true,
-            "subArrow": false
+            "subArrow": true,
+            "submenus": {
+              "submenu": [
+                {
+                  "name": "data_table",
+                  "title": "Data table",
+                  "url": "Pages.DataTablePageViewModel",
+                  "master": true
+                }
+              ]
+            }
           },
           {
             "name": "sample_pages",

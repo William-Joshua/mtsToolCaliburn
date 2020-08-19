@@ -7,14 +7,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#da8cff" Offset="0"></GradientStop>
                                 <GradientStop Color="#9a55ff" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -35,14 +35,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#e7ebf0" Offset="0"></GradientStop>
                                 <GradientStop Color="#868e96" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -63,14 +63,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#84d9d2" Offset="0"></GradientStop>
                                 <GradientStop Color="#07cdae" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -91,14 +91,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#ffbf96" Offset="0"></GradientStop>
                                 <GradientStop Color="#fe7096" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -119,14 +119,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f6e384" Offset="0"></GradientStop>
                                 <GradientStop Color="#ffd500" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -147,14 +147,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#90caf9" Offset="0"></GradientStop>
                                 <GradientStop Color="#047edf " Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -175,14 +175,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f4f4f4" Offset="0"></GradientStop>
                                 <GradientStop Color="#e4e4e9" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -203,14 +203,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="5" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#5e7188" Offset="0"></GradientStop>
                                 <GradientStop Color="#3e4b5b" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -231,14 +231,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#da8cff" Offset="0"></GradientStop>
                                 <GradientStop Color="#9a55ff" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -259,14 +259,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#e7ebf0" Offset="0"></GradientStop>
                                 <GradientStop Color="#868e96" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -287,14 +287,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#84d9d2" Offset="0"></GradientStop>
                                 <GradientStop Color="#07cdae" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -315,14 +315,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#ffbf96" Offset="0"></GradientStop>
                                 <GradientStop Color="#fe7096" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -343,14 +343,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f6e384" Offset="0"></GradientStop>
                                 <GradientStop Color="#ffd500" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -371,14 +371,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#90caf9" Offset="0"></GradientStop>
                                 <GradientStop Color="#047edf " Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -399,14 +399,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#f4f4f4" Offset="0"></GradientStop>
                                 <GradientStop Color="#e4e4e9" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -427,14 +427,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36"  >
+                    <Border  CornerRadius="21" BorderThickness="1" Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"   >
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="#5e7188" Offset="0"></GradientStop>
                                 <GradientStop Color="#3e4b5b" Offset="1"></GradientStop>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="1"/>
@@ -455,8 +455,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}">
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#b66dff"></Setter>
@@ -488,8 +488,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#c3bdbd"></Setter>
@@ -521,8 +521,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#1bcfb4"></Setter>
@@ -554,8 +554,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}">
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#fe7c96"></Setter>
@@ -587,8 +587,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#fed713"></Setter>
@@ -620,8 +620,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#198ae3"></Setter>
@@ -653,8 +653,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.Foreground="#000000"  TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.Foreground="#000000"  TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#f8f9fa"></Setter>
@@ -684,8 +684,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.Foreground="#000000"  TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.Foreground="#000000"  TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.BorderBrush" Value="#3e4b5b"></Setter>
@@ -715,8 +715,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#b66dff" />
@@ -737,8 +737,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" Background="#c3bdbd"  BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" Background="#c3bdbd"  BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Opacity" Value="0.8" />
@@ -759,8 +759,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#84d9d2" />
@@ -781,8 +781,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#ffbf96" />
@@ -803,8 +803,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#f6e384" />
@@ -825,8 +825,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#90caf9" />
@@ -847,8 +847,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#000000" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#f4f4f4" />
@@ -869,8 +869,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5" BorderThickness="1"  Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.Foreground="#ffffff" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="Border.Background" Value="#5e7188" />
@@ -891,8 +891,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#b66dff" />
@@ -923,8 +923,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#c3bdbd" />
@@ -955,8 +955,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#1bcfb4" />
@@ -987,8 +987,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#fe7c96" />
@@ -1019,8 +1019,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#fed713" />
@@ -1051,8 +1051,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#198ae3" />
@@ -1083,8 +1083,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#000000" />
@@ -1115,8 +1115,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}" MinWidth="120" Height="{TemplateBinding Height}" MinHeight="36" >
-                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    <Border  CornerRadius="5"     Width="{TemplateBinding Width}"  Height="{TemplateBinding Height}"  >
+                        <ContentPresenter TextElement.FontSize="14px" TextElement.FontFamily="ubuntu-bold" TextElement.FontWeight="DemiBold"  HorizontalAlignment="Center"  Margin="3" VerticalAlignment="Center" RecognizesAccessKey="True"/>
                         <Border.Style>
                             <Style>
                                 <Setter Property="TextElement.Foreground" Value="#3e4b5b" />

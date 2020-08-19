@@ -3,364 +3,113 @@
                     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                     xmlns:iconpacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                     xmlns:local="clr-namespace:mtsToolCaliburn.Views.Templates">
-    <!--表格主题色-->
-    <SolidColorBrush x:Key="TableThemeColor" Color="#b66dff"/>
-    <!--选中元素表格前景色-->
-    <SolidColorBrush x:Key="TableSelectForeColor" Color="#ffffff"/>
-    <Style TargetType="{x:Type DataGridColumnHeader}">
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Height" Value="44" />
-        <Setter Property="FontWeight" Value="Black" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
-                    <Grid Margin="2">
-                        <Border x:Name="columnHeaderBorder"
-						        BorderThickness="0 0 0 1" BorderBrush="#aab2bd" Background="{x:Null}">
-                            <DockPanel>
-                                <iconpacks:PackIconMaterial Kind="ArrowDown" DockPanel.Dock="Right" Width="8" Height="8"  VerticalAlignment="Center" Foreground="#aab2bd" Margin="1"></iconpacks:PackIconMaterial>
-                                <iconpacks:PackIconMaterial Kind="ArrowUp"  DockPanel.Dock="Right" Width="8" Height="8"   VerticalAlignment="Center" Foreground="#aab2bd" Margin="1"></iconpacks:PackIconMaterial>
-                                <ContentPresenter  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-							                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-							                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                            </DockPanel>
+    <!--ComboBox-->
+    <!--ComBoBox项选中背景色-->
+    <SolidColorBrush x:Key="ComboBoxSelectdBackground" Color="#fe7096"/>
+    <!--ComBoBox项鼠标经过背景色-->
+    <SolidColorBrush x:Key="ComboBoxMouseOverBackground" Color="#ffbf96"/>
+    <!--ComBoBox项选中前景色-->
+    <SolidColorBrush x:Key="ComboBoxSelectedForeground" Color="#ffffff"/>
+    <!--ComBoBox项鼠标经过前景色-->
+    <SolidColorBrush x:Key="ComboBoxMouseOverForegrond" Color="#ffffff"/>
 
-                        </Border>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style TargetType="{x:Type DataGridRow}">
-        <Setter Property="Background" Value="LightYellow" />
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />
-        <Setter Property="ValidationErrorTemplate">
+    <ControlTemplate x:Key="PurpleComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Grid Height="25" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" x:Name="Arrow"   Background="Transparent">
+                <iconpacks:PackIconMaterial x:Name="ArrowChevron"  Width="10" Height="10"  Kind="ChevronDown" VerticalAlignment="Center" HorizontalAlignment="Center"></iconpacks:PackIconMaterial>
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter TargetName="ArrowChevron" Property="iconpacks:PackIconMaterial.Kind" Value="ChevronRight" />
+                <Setter TargetName="Arrow" Property="Margin" Value="0 0 0 2"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="select-primary" TargetType="{x:Type ComboBox}">
+        <Setter Property="ItemContainerStyle">
             <Setter.Value>
-                <ControlTemplate>
-                    <TextBlock Margin="2,0,0,0"
-					           VerticalAlignment="Center"
-					           Foreground="Red"
-					           Text="!" />
-                </ControlTemplate>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate  TargetType="{x:Type ComboBoxItem}">
+                                <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" >
+                                    <Border x:Name="_borderbg" Background="Transparent"/>
+                                    <TextBlock Margin="3 0 3 0" VerticalAlignment="Center" x:Name="_txt" Foreground="#333" Text="{Binding Content,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    <Border x:Name="_border" Background="White" Opacity="0"/>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="true">
+                                        <Setter TargetName="_borderbg" Property="Background" Value="{StaticResource ComboBoxSelectdBackground}" />
+                                        <Setter TargetName="_txt" Property="Foreground" Value="{StaticResource ComboBoxSelectedForeground}"/>
+                                    </Trigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="false"/>
+                                            <Condition Property="IsMouseOver" Value="true"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter TargetName="_borderbg" Property="Background" Value="{StaticResource ComboBoxMouseOverBackground}" />
+                                        <Setter TargetName="_txt" Property="Foreground" Value="{StaticResource ComboBoxMouseOverForegrond}"/>
+                                    </MultiTrigger>
+
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
             </Setter.Value>
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type DataGridRow}">
-                    <Border x:Name="DGR_Border"
-					        BorderBrush="{TemplateBinding BorderBrush}"
-					        BorderThickness="{TemplateBinding BorderThickness}"
-					        SnapsToDevicePixels="True">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                <GradientStop Offset="0" Color="#AAFFFFAA" />
-                                <GradientStop Offset="1" Color="#AAFFD455" />
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal" />
-                                <VisualState x:Name="Normal_AlternatingRow">
-                                    <Storyboard>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="#AAF0C570" />
-                                        </ColorAnimationUsingKeyFrames>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="#AAFF7F00" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Normal_Selected">
-                                    <Storyboard>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="#CCAA0000" />
-                                        </ColorAnimationUsingKeyFrames>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="#77D52B00" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="MouseOver">
-                                    <Storyboard>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="#AAEA9595" />
-                                        </ColorAnimationUsingKeyFrames>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="#AAF54B4B" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                        <SelectiveScrollingGrid>
-                            <SelectiveScrollingGrid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </SelectiveScrollingGrid.ColumnDefinitions>
-                            <SelectiveScrollingGrid.RowDefinitions>
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </SelectiveScrollingGrid.RowDefinitions>
-                            <DataGridCellsPresenter Grid.Column="1"
-							                        ItemsPanel="{TemplateBinding ItemsPanel}"
-							                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                            <DataGridDetailsPresenter Grid.Row="1"
-							                          Grid.Column="1"
-							                          SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen,
-							                                                                                         ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical},
-							                                                                                         Converter={x:Static DataGrid.RowDetailsScrollingConverter},
-							                                                                                         RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-							                          Visibility="{TemplateBinding DetailsVisibility}" />
-                            <DataGridRowHeader Grid.RowSpan="2"
-							                   SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
-							                   Visibility="{Binding HeadersVisibility,
-							                                        ConverterParameter={x:Static DataGridHeadersVisibility.Row},
-							                                        Converter={x:Static DataGrid.HeadersVisibilityConverter},
-							                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
-                        </SelectiveScrollingGrid>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style TargetType="{x:Type DataGridCell}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type DataGridCell}">
-                    <Border x:Name="border"
-					        Background="Transparent"
-					        BorderBrush="Transparent"
-					        BorderThickness="1"
-					        SnapsToDevicePixels="True">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="FocusStates">
-                                <VisualState x:Name="Unfocused" />
-                                <VisualState x:Name="Focused" />
-                            </VisualStateGroup>
-                            <VisualStateGroup x:Name="CurrentStates">
-                                <VisualState x:Name="Regular" />
-                                <VisualState x:Name="Current">
-                                    <Storyboard>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="Gray" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style TargetType="{x:Type ToggleButton}">
-        <Setter Property="Padding" Value="3" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ToggleButton">
-                    <Grid>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal" />
-                                <VisualState x:Name="MouseOver">
-                                    <Storyboard>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DefaultPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
-                                            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#AA0000" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Pressed" />
-                                <VisualState x:Name="Disabled" />
-                            </VisualStateGroup>
-                            <VisualStateGroup x:Name="CheckStates">
-                                <VisualState x:Name="Checked">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Duration="0"
-										                               Storyboard.TargetName="DefaultPath"
-										                               Storyboard.TargetProperty="Visibility">
-                                            <DiscreteObjectKeyFrame KeyTime="0">
-                                                <DiscreteObjectKeyFrame.Value>
-                                                    <Visibility>Collapsed</Visibility>
-                                                </DiscreteObjectKeyFrame.Value>
-                                            </DiscreteObjectKeyFrame>
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Duration="0"
-										                               Storyboard.TargetName="CheckedPath"
-										                               Storyboard.TargetProperty="Visibility">
-                                            <DiscreteObjectKeyFrame KeyTime="0">
-                                                <DiscreteObjectKeyFrame.Value>
-                                                    <Visibility>Visible</Visibility>
-                                                </DiscreteObjectKeyFrame.Value>
-                                            </DiscreteObjectKeyFrame>
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="CheckedPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
-                                            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#CCAA0000" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Unchecked" />
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                        <ContentPresenter x:Name="contentPresenter"
-						                  Margin="{TemplateBinding Padding}"
-						                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-						                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-						                  Content="{TemplateBinding Content}"
-						                  ContentTemplate="{TemplateBinding ContentTemplate}" />
-                        <Path x:Name="DefaultPath"
-						      VerticalAlignment="Top"
-						      Data="M0,0 14,7 0,14 Z"
-						      Fill="Gray"
-						      Stretch="Fill" />
-                        <Path x:Name="CheckedPath"
-						      VerticalAlignment="Top"
-						      Data="M0,0 14,0 7,14 Z"
-						      Fill="LightGray"
-						      Stretch="Fill"
-						      Visibility="Collapsed" />
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="table-primary" TargetType="{x:Type DataGrid}">
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
-        <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected" />
-        <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
-        <Setter Property="ScrollViewer.PanningMode" Value="Both" />
-        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate  TargetType="{x:Type DataGrid}">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="48px"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="48px"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Border CornerRadius="1" BorderThickness="1" Margin="2"  >
+                        <Border.Style>
+                            <Style>
+                                <Setter Property="Border.BorderBrush" Value="#e9ecef"/>
+                                <Style.Triggers>
+                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                        <Setter Property="Border.BorderBrush" Value="#80bdff" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <Grid>
+
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"/>
+                                <ColumnDefinition Width="0.3*" MaxWidth="30"/>
                             </Grid.ColumnDefinitions>
-                            <StackPanel Orientation="Horizontal" Margin="10 5" Grid.Column="0">
-                                <Label Content="显示" VerticalAlignment="Center" ></Label>
-                                <ComboBox Style="{StaticResource select-primary}"  Width="52">
-                                    <ComboBoxItem>5</ComboBoxItem>
-                                    <ComboBoxItem IsSelected="True">10</ComboBoxItem>
-                                    <ComboBoxItem>15</ComboBoxItem>
-                                    <ComboBoxItem>all</ComboBoxItem>
-                                </ComboBox>
-                                <Label Content="行" VerticalAlignment="Center" ></Label>
-                            </StackPanel>
+                            <ContentPresenter HorizontalAlignment="Left" Margin="3,3,0,3" x:Name="ContentSite" VerticalAlignment="Center" Content="{TemplateBinding SelectionBoxItem}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" IsHitTestVisible="False" />
 
-                            <Grid Margin="10 5" Grid.Column="1">
-                                <TextBox Style="{StaticResource tb-control-none}" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="搜索"></TextBox>
-                            </Grid>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <Border Background="#fff"
-					        BorderBrush="{TemplateBinding BorderBrush}"
-					        Padding="{TemplateBinding Padding}"
-					        SnapsToDevicePixels="True">
-                                <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
-                                    <ScrollViewer.Template>
-                                        <ControlTemplate TargetType="{x:Type ScrollViewer}">
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="Auto" />
-                                                </Grid.ColumnDefinitions>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="Auto" />
-                                                    <RowDefinition Height="*" />
-                                                    <RowDefinition Height="Auto" />
-                                                </Grid.RowDefinitions>
-                                                <Button Width="{Binding CellsPanelHorizontalOffset,
-										                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-										        Command="{x:Static DataGrid.SelectAllCommand}"
-										        Focusable="false"
-										        Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle,
-										                                                      TypeInTargetAssembly={x:Type DataGrid}}}"
-										        Visibility="{Binding HeadersVisibility,
-										                             ConverterParameter={x:Static DataGridHeadersVisibility.All},
-										                             Converter={x:Static DataGrid.HeadersVisibilityConverter},
-										                             RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
-                                                <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
-										                                Grid.Column="1"
-										                                Visibility="{Binding HeadersVisibility,
-										                                                     ConverterParameter={x:Static DataGridHeadersVisibility.Column},
-										                                                     Converter={x:Static DataGrid.HeadersVisibilityConverter},
-										                                                     RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
-                                                <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
-										                        Grid.Row="1"
-										                        Grid.ColumnSpan="2"
-										                        CanContentScroll="{TemplateBinding CanContentScroll}" />
-                                                <ScrollBar x:Name="PART_VerticalScrollBar"
-										           Grid.Row="1"
-										           Grid.Column="2"
-										           Maximum="{TemplateBinding ScrollableHeight}"
-										           Orientation="Vertical"
-										           Style="{DynamicResource MyScrollBar}"
-										           ViewportSize="{TemplateBinding ViewportHeight}"
-										           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
-										           Value="{Binding VerticalOffset,
-										                           Mode=OneWay,
-										                           RelativeSource={RelativeSource TemplatedParent}}" />
-                                                <Grid Grid.Row="2" Grid.Column="1">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
-                                                        <ColumnDefinition Width="*" />
-                                                    </Grid.ColumnDefinitions>
-                                                    <ScrollBar x:Name="PART_HorizontalScrollBar"
-											           Grid.Column="1"
-											           Maximum="{TemplateBinding ScrollableWidth}"
-											           Orientation="Horizontal"
-											           ViewportSize="{TemplateBinding ViewportWidth}"
-											           Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
-											           Value="{Binding HorizontalOffset,
-											                           Mode=OneWay,
-											                           RelativeSource={RelativeSource TemplatedParent}}" />
-                                                </Grid>
-                                            </Grid>
-                                        </ControlTemplate>
-                                    </ScrollViewer.Template>
-                                    <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                                </ScrollViewer>
+                            <!--ToggleButton 已数据绑定到 ComboBox 本身以切换 IsDropDownOpen-->
+                            <ToggleButton Grid.Column="0"  Grid.ColumnSpan="2"  Template="{StaticResource PurpleComboBoxToggleButton}" x:Name="ToggleButton" Focusable="false" IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" ClickMode="Press"/>
+                            <!--必须将 TextBox 命名为 PART_EditableTextBox，否则 ComboBox 将无法识别它-->
+                            <TextBox   Visibility="Hidden" BorderThickness="0"   Margin="2 0 0 0" x:Name="PART_EditableTextBox"  VerticalAlignment="Center" Focusable="True" Background="Transparent" IsReadOnly="{TemplateBinding IsReadOnly}" />
 
-                            </Border>
-                        </Grid>
-                        <Grid Grid.Row="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"></ColumnDefinition>
-                                <ColumnDefinition Width="8*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Orientation="Horizontal" Grid.Column="0">
-                                <TextBlock Text="数据 : " FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text="{Binding tablePageStartNum}"  FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text=" ~ " FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text="{Binding tablePageEndNum}"  FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text=" 总计 :  " FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                                <TextBlock Text="{Binding tablePageSum}"  FontFamily="微软雅黑" FontSize="12px" Foreground="#343a40"></TextBlock>
-                            </StackPanel>
-                            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" >
-                                <DockPanel>
-                                    <Grid Style="{StaticResource bg-secondary}" Margin="2" Width="32"  DockPanel.Dock="Right">
-                                        <iconpacks:PackIconMaterial Kind="ChevronRight" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="8" Height="8"></iconpacks:PackIconMaterial>
+                            <!--Popup 可显示 ComboBox 中的项列表。IsOpen 已数据绑定到通过 PurpleComboBoxToggleButton 来切换的 IsDropDownOpen-->
+                            <Popup IsOpen="{TemplateBinding IsDropDownOpen}" Placement="Bottom" x:Name="Popup" Focusable="False" AllowsTransparency="True" PopupAnimation="Slide">
+                                <Border x:Name="DropDownBorder"  BorderBrush="#e9ecef" BorderThickness="1 0 1 1">
+                                    <Grid MaxHeight="150" MinWidth="{TemplateBinding ActualWidth}" x:Name="DropDown" SnapsToDevicePixels="True">
+                                        <ScrollViewer  SnapsToDevicePixels="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" CanContentScroll="True">
+                                            <!--StackPanel 用于显示子级，方法是将 IsItemsHost 设置为 True-->
+                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" Background="White"/>
+                                        </ScrollViewer>
                                     </Grid>
-                                    <ItemsControl DockPanel.Dock="Right"></ItemsControl>
-                                    <Grid Style="{StaticResource bg-secondary}" Margin="2" Width="32" DockPanel.Dock="Right">
-                                        <iconpacks:PackIconMaterial Kind="ChevronLeft" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="8" Height="8"></iconpacks:PackIconMaterial>
-                                    </Grid>
-                                    <Grid></Grid>
-                                </DockPanel>
-                            </ScrollViewer>
+                                </Border>
+                            </Popup>
                         </Grid>
-                    </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEditable" Value="true">
+                            <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

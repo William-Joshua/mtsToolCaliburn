@@ -7,4 +7,21 @@
         <Setter Property="BorderThickness" Value="1"></Setter>
         <Setter Property="Background" Value="#ffffff"></Setter>
     </Style>
+    <Style x:Key="socialiconcontainer" TargetType="Border">
+        <Setter Property="CornerRadius" Value="3"></Setter>
+        <Setter Property="Background" Value="#ffffff"></Setter>
+    </Style>
+    <!-- Grid Style -->
+    <Style x:Key="bg-secondary" TargetType="Grid">
+        <Setter Property="Background" Value="#c3bdbd"></Setter>
+    </Style>
+
+    <Style x:Key="form-label" TargetType="Label">
+        <Setter Property="FontSize" Value="14px"></Setter>
+        <Setter Property="FontFamily" Value="ubuntu-medium"></Setter>
+        <Setter Property="Foreground" Value="#343a40"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+        <Setter Property="Margin" Value="5"></Setter>
+    </Style>
 </ResourceDictionary>

@@ -62,6 +62,7 @@
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Commons\GlobalSolutionCenter.cs" />
     <Compile Include="ILoginPage.cs" />
+    <Compile Include="Models\DataTableEntry.cs" />
     <Compile Include="Models\NavigateMenusRootObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -83,6 +84,7 @@
     <Compile Include="IShell.cs" />
     <Compile Include="ViewModels\Pages\ButtonsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\DashboardPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\DataTablePageViewModel.cs" />
     <Compile Include="ViewModels\Pages\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SignInViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
@@ -165,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\ButtonsPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\DataTablePageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
