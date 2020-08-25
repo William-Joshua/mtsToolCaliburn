@@ -1,93 +1,90 @@
-﻿<controls:MetroWindow x:Class="mtsToolCaliburn.Views.Pages.LoginPageView"
+﻿<UserControl x:Class="mtsToolCaliburn.Views.Pages.LoginPageView"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
          xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
          xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-         xmlns:cal="http://www.caliburnproject.org" 
-         Title="MTS Tools Console" TitleCharacterCasing="Normal"
-         GlowBrush="{DynamicResource AccentColorBrush}"
-         WindowStartupLocation="CenterScreen" ShowTitleBar="True"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        IsCloseButtonEnabled="True" ShowMinButton="False" ShowMaxRestoreButton="False"
-        Width="420" Height="586">
+         xmlns:cal="http://www.caliburnproject.org" >
     <Grid>
-        <Grid Width="288" Height="490">
-            <StackPanel >
-                <Grid Height="33" Margin="0 0 0 32">
-                    <Image  Name="purpleLogo"  HorizontalAlignment="Left" Source="pack://SiteOfOrigin:,,,/Resources/Images/logo.png" Width="140" Height="28"  RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </Grid>
-                <Grid Height="21" Margin="0 0 0 8">
-                    <TextBlock  HorizontalAlignment="Left" Text="Hello! let's get started" FontFamily="ubuntu-medium" FontSize="16px" FontWeight="DemiBold"></TextBlock>
-                </Grid>
-                <Grid Height="21" Margin="0 0 0 8">
-                    <TextBlock  HorizontalAlignment="Left" Text="Sign in to continue." FontFamily="ubuntu-light" FontSize="15px" FontWeight="Light"></TextBlock>
-                </Grid>
-                <Grid Width="288" Height="354" HorizontalAlignment="Left">
-                    <StackPanel>
-                        <Border BorderThickness="1" BorderBrush="#ebedf2" Margin="0 0 0 24">
-                            <Grid Height="50">
-                                <TextBox Width="224"  Height="19" VerticalAlignment="Center" BorderThickness="0"
+        <Border Style="{StaticResource container}">
+            <Grid>
+                <StackPanel Margin="48">
+                    <Grid Height="33" Margin="0 0 0 32">
+                        <Image  Name="purpleLogo"  HorizontalAlignment="Left" Source="pack://SiteOfOrigin:,,,/Resources/Images/logo.png" Width="140" Height="28"  RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    </Grid>
+                    <Grid Height="21" Margin="0 0 0 8">
+                        <TextBlock  HorizontalAlignment="Left" Text="Hello! let's get started" FontFamily="ubuntu-medium" FontSize="16px" FontWeight="DemiBold"></TextBlock>
+                    </Grid>
+                    <Grid Height="21" Margin="0 0 0 8">
+                        <TextBlock  HorizontalAlignment="Left" Text="Sign in to continue." FontFamily="ubuntu-light" FontSize="15px" FontWeight="Light"></TextBlock>
+                    </Grid>
+                    <Grid Width="288" Height="354" HorizontalAlignment="Left">
+                        <StackPanel>
+                            <Border BorderThickness="1" BorderBrush="#ebedf2" Margin="0 0 0 24">
+                                <Grid Height="50">
+                                    <TextBox Width="224"  Height="19" VerticalAlignment="Center" BorderThickness="0"
                                         controls:TextBoxHelper.Watermark="UserName">
-                                </TextBox>
-                            </Grid>
-                        </Border>
-                        <Border BorderThickness="1" BorderBrush="#ebedf2"  Margin="0 0 0 24">
-                            <Grid Height="50">
-                                <PasswordBox Width="224"  Height="19" VerticalAlignment="Center" BorderThickness="0"
+                                    </TextBox>
+                                </Grid>
+                            </Border>
+                            <Border BorderThickness="1" BorderBrush="#ebedf2"  Margin="0 0 0 24">
+                                <Grid Height="50">
+                                    <PasswordBox Width="224"  Height="19" VerticalAlignment="Center" BorderThickness="0"
                                               controls:TextBoxHelper.Watermark="PassWord">
-                                </PasswordBox>
-                            </Grid>
-                        </Border>
-                        <Border  Margin="0 16 0 0"  Height="50" CornerRadius="5" BorderThickness="1">
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#da8cff" Offset="0"></GradientStop>
-                                    <GradientStop Color="#9a55ff" Offset="1"></GradientStop>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            <Border.Style>
-                                <Style>
-                                    <Setter Property="Border.Opacity" Value="1"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="Border.IsMouseOver" Value="True">
-                                            <Setter Property="Border.Opacity" Value="0.8" />
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Border.Style>
-                            <Grid  >
-                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="SIGN IN" Foreground="#ffffff"  FontFamily="ubuntu-bold" FontSize="14px" FontWeight="DemiBold"></TextBlock>
-                            </Grid>
-                        </Border>
+                                    </PasswordBox>
+                                </Grid>
+                            </Border>
+                            <Border  Margin="0 16 0 0"  Height="50" CornerRadius="5" BorderThickness="1">
+                                <Border.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#da8cff" Offset="0"></GradientStop>
+                                        <GradientStop Color="#9a55ff" Offset="1"></GradientStop>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border.Style>
+                                    <Style>
+                                        <Setter Property="Border.Opacity" Value="1"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Opacity" Value="0.8" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <Grid  >
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="SIGN IN" Foreground="#ffffff"  FontFamily="ubuntu-bold" FontSize="14px" FontWeight="DemiBold"></TextBlock>
+                                </Grid>
+                            </Border>
 
 
-                        <Grid Margin="0 8" Height="46">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="144"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0">
+                            <Grid Margin="0 8" Height="46">
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="144"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="116"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <iconPacks:PackIconMaterial  Grid.Column="0" Kind='{Binding LoginKeepSigned}' Background="Transparent" Foreground="#da8cff" VerticalAlignment="Center" cal:Message.Attach="[Event MouseLeftButtonDown] = [Action KeepAccoutSigned()]"></iconPacks:PackIconMaterial>
-                                <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="Keep me signed in" FontFamily="ubuntu-regular"  FontSize="14" Foreground="#9c9fa6"></TextBlock>
+                                <Grid Grid.Column="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="116"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <iconPacks:PackIconMaterial  Grid.Column="0" Kind='{Binding LoginKeepSigned}' Background="Transparent" Foreground="#da8cff" VerticalAlignment="Center" cal:Message.Attach="[Event MouseLeftButtonDown] = [Action KeepAccoutSigned()]"></iconPacks:PackIconMaterial>
+                                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="Keep me signed in" FontFamily="ubuntu-regular"  FontSize="14" Foreground="#9c9fa6"></TextBlock>
+                                </Grid>
+                                <TextBlock Text="Forgot password?" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
                             </Grid>
-                            <TextBlock Text="Forgot password?" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
-                        </Grid>
-                        <Grid Margin="0 24 0 0" Height="18">
-                            <Grid Width="216" >
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="48"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="Don't have an account? " FontFamily="ubuntu-light" FontWeight="Light" FontSize="16"></TextBlock>
-                                <TextBlock Grid.Column="1" Text="Create" FontFamily="ubuntu-light" FontSize="16" Foreground="#da8cff"></TextBlock>
+                            <Grid Margin="0 24 0 0" Height="18">
+                                <Grid Width="216" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="48"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Don't have an account? " FontFamily="ubuntu-light" FontWeight="Light" FontSize="16"></TextBlock>
+                                    <TextBlock Grid.Column="1" Text="Create" FontFamily="ubuntu-light" FontSize="16" Foreground="#da8cff"></TextBlock>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </StackPanel>
-                </Grid>
-            </StackPanel>
-        </Grid>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
-</controls:MetroWindow>
+</UserControl>

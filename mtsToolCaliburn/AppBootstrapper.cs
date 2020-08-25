@@ -16,7 +16,6 @@ namespace mtsToolCaliburn {
 
             container.Singleton<IWindowManager, WindowManager>();
             container.Singleton<IEventAggregator, EventAggregator>();
-            container.PerRequest<ILoginPage, LoginPageViewModel>();
             container.PerRequest<IShell, ShellViewModel>();
         }
 

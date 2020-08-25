@@ -26,6 +26,12 @@
                   "master": true
                 },
                 {
+                  "name": "badges",
+                  "title": "Badges",
+                  "url": "Pages.BadgesPageViewModel",
+                  "master": true
+                },
+                {
                   "name": "typography",
                   "title": "Typography",
                   "url": "",
@@ -68,6 +74,12 @@
             "submenus": {
               "submenu": [
                 {
+                  "name": "basic_table",
+                  "title": "Basic Table",
+                  "url": "Pages.BasicTablePageViewModel",
+                  "master": true
+                },
+                {
                   "name": "data_table",
                   "title": "Data table",
                   "url": "Pages.DataTablePageViewModel",
@@ -77,20 +89,14 @@
             }
           },
           {
-            "name": "sample_pages",
-            "title": "Sample Pages",
+            "name": "user_pages",
+            "title": "User Pages",
             "iconType": "MedicalBag",
             "url": "",
             "master": true,
             "subArrow": true,
             "submenus": {
               "submenu": [
-                {
-                  "name": "blank_page",
-                  "title": "Blank Page",
-                  "url": "",
-                  "master": true
-                },
                 {
                   "name": "login",
                   "title": "Login",

@@ -11,7 +11,7 @@ using System.Windows.Data;
 
 namespace mtsToolCaliburn.ViewModels.Pages
 {
-    public class LoginPageViewModel : Screen, ILoginPage
+    public class LoginPageViewModel : Screen
     {
         private PackIconMaterialKind _loginKeepSigned;
         public PackIconMaterialKind LoginKeepSigned

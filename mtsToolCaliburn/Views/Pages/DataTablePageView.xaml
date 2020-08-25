@@ -12,7 +12,7 @@
                 <StackPanel Margin="10">
                     <Label Style="{StaticResource card-title}" Content="Data Table"></Label>
 
-                    <DataGrid Style="{StaticResource table-primary}"
+                    <DataGrid Style="{StaticResource table-primary}" ColumnHeaderStyle="{StaticResource table-arrow-hearder}"
                               AutoGenerateColumns="False" ItemsSource="{Binding DataTableEntries}" GridLinesVisibility="None" >
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Order #"  IsReadOnly="True" Binding="{Binding Order}" Width="*"></DataGridTextColumn>

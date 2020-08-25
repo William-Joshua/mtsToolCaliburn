@@ -82,6 +82,8 @@
     <Compile Include="ViewModels\Components\NavigateBarViewModel.cs" />
     <Compile Include="ViewModels\Components\UserBusinessCardViewModel.cs" />
     <Compile Include="IShell.cs" />
+    <Compile Include="ViewModels\Pages\BadgesPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\BasicTablePageViewModel.cs" />
     <Compile Include="ViewModels\Pages\ButtonsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\DashboardPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\DataTablePageViewModel.cs" />
@@ -163,6 +165,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Components\UserBusinessCardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\BadgesPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\BasicTablePageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
