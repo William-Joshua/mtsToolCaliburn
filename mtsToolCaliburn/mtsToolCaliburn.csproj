@@ -188,6 +188,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Templates\BadgesUIStyleDict.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Templates\ButtonsUIStyleDict.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

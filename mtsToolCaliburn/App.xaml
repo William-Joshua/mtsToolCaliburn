@@ -26,6 +26,8 @@
                 <ResourceDictionary Source="pack://application:,,,/Views/Templates/ComboBoxUIStyleDict.xaml" />
                 <!-- Table UI Style -->
                 <ResourceDictionary Source="pack://application:,,,/Views/Templates/TableUIStyleDict.xaml" />
+                <!-- Badges UI Style -->
+                <ResourceDictionary Source="pack://application:,,,/Views/Templates/BadgesUIStyleDict.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
