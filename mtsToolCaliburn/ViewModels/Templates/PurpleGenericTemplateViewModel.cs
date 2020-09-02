@@ -2,9 +2,11 @@
 using mtsToolCaliburn.Commons;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 
 namespace mtsToolCaliburn.ViewModels.Templates
 {
@@ -77,6 +79,21 @@ namespace mtsToolCaliburn.ViewModels.Templates
             Screen screen = System.Activator.CreateInstance(type) as Screen;
             NavTabPage = screen;
             return;
+        }
+    }
+
+    public class CornerRadiusRoundedConverter: IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            int originSizeEntry = System.Convert.ToInt32(Math.Round(float.Parse(value.ToString(), CultureInfo.InvariantCulture.NumberFormat)));
+            return originSizeEntry/2;
+
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
         }
     }
 }

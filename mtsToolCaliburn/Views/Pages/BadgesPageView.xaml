@@ -9,6 +9,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <vm:NormalBadgesConverter x:Key="NormalBadgesConverter"></vm:NormalBadgesConverter>
+        <vm:BadgePillsConverter x:Key="BadgePillsConverter"></vm:BadgePillsConverter>
+        <vm:BadgeOutlineNormalConverter x:Key="BadgeOutlineNormalConverter"></vm:BadgeOutlineNormalConverter>
+        <vm:BadgeOutlineRoundedConverter x:Key="BadgeOutlineRoundedConverter"></vm:BadgeOutlineRoundedConverter>
     </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Vertical">
@@ -33,7 +36,7 @@
                                     <DataGridTemplateColumn Header="Label" Width="*" >
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <Label Content="{Binding Label}" HorizontalAlignment="Center" Style="{Binding Path=Label, Converter={StaticResource NormalBadgesConverter}}"></Label>
+                                                <Label Content="{Binding Label}" Style="{Binding Path=Label, Converter={StaticResource NormalBadgesConverter}}"></Label>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
@@ -55,7 +58,7 @@
                                     <DataGridTemplateColumn Header="Label" Width="*" >
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <Label Content="{Binding Label}" Width="66" HorizontalAlignment="Center"></Label>
+                                                <Label Content="{Binding Label}" Style="{Binding Path=Label, Converter={StaticResource BadgePillsConverter}}"></Label>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
@@ -76,14 +79,14 @@
                                     <DataGridTemplateColumn Header="Normal" Width="*" >
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <Label Content="{Binding Label}" Width="66" HorizontalAlignment="Center"></Label>
+                                                <Label Content="{Binding Label}" Style="{Binding Path=Label, Converter={StaticResource BadgeOutlineNormalConverter}}"></Label>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
                                     <DataGridTemplateColumn Header="Rounded" Width="*" >
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <Label Content="{Binding Label}" Width="66" HorizontalAlignment="Center"></Label>
+                                                <Label Content="{Binding Label}"  Style="{Binding Path=Label, Converter={StaticResource BadgeOutlineRoundedConverter}}"></Label>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>

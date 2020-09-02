@@ -56,6 +56,51 @@ namespace mtsToolCaliburn.ViewModels.Pages
         }
     }
 
+    public class BadgePillsConverter:IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var badgesEntry = (BadgeType)value;
+            return App.Current.Resources[string.Format("badge-pill-{0}", (Enum.GetName(typeof(BadgeType), badgesEntry)).ToLower())];
+
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
+    public class BadgeOutlineNormalConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var badgesEntry = (BadgeType)value;
+            return App.Current.Resources[string.Format("badge-outline-normal-{0}", (Enum.GetName(typeof(BadgeType), badgesEntry)).ToLower())];
+
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
+    public class BadgeOutlineRoundedConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var badgesEntry = (BadgeType)value;
+            return App.Current.Resources[string.Format("badge-outline-rounded-{0}", (Enum.GetName(typeof(BadgeType), badgesEntry)).ToLower())];
+
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
     public class BadgesEntry
     {
         public string Item { get; set; }
