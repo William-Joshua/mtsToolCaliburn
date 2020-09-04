@@ -40,27 +40,7 @@
                         <iconPacks:PackIconMaterial Kind="Magnify" Width="14" VerticalAlignment="Center"  Foreground="#9c9fa6" HorizontalAlignment="Center" ></iconPacks:PackIconMaterial>
                     </Grid>
                     <Grid>
-                        <TextBox Width="180" BorderThickness="0" VerticalAlignment="Center">
-                            <TextBox.Resources>
-                                <VisualBrush x:Key="HintText"  Opacity="0.5" Stretch="None"  AlignmentX="Left">
-                                    <VisualBrush.Visual>
-                                        <TextBlock Text="Search projects"  FontFamily="ubuntu-regular" FontSize="14"  Foreground="#495057" />
-                                    </VisualBrush.Visual>
-                                </VisualBrush>
-                            </TextBox.Resources>
-                            <TextBox.Style>
-                                <Style TargetType="TextBox">
-                                    <Style.Triggers>
-                                        <Trigger Property="Text" Value="{x:Null}">
-                                            <Setter Property="Background" Value="{StaticResource HintText}"/>
-                                        </Trigger>
-                                        <Trigger Property="Text" Value="">
-                                            <Setter Property="Background" Value="{StaticResource HintText}"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </TextBox.Style>
-                        </TextBox>
+                        <TextBox Width="180" BorderThickness="0" VerticalAlignment="Center" controls:TextBoxHelper.Watermark="Search projects" ></TextBox>
                     </Grid>
                 </StackPanel>
                 <DockPanel  Grid.Column="1">

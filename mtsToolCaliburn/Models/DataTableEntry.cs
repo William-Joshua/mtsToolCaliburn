@@ -8,7 +8,7 @@ namespace mtsToolCaliburn.Models
 {
     public class DataTableEntry
     {
-        public DataTableEntry(string order, string purchasedOn, string customer, string shipTo,string basePrice,string purchasedPrice,DataTableStatus status)
+        public DataTableEntry(int order, string purchasedOn, string customer, string shipTo,string basePrice,string purchasedPrice,DataTableStatus status)
         {
             Order = order;
             PurchasedOn = purchasedOn;
@@ -18,7 +18,7 @@ namespace mtsToolCaliburn.Models
             PurchasedPrice = purchasedPrice;
             Status = status;
         }
-        public string Order { get; set; }
+        public int Order { get; set; }
 
         public string PurchasedOn { get; set; }
 

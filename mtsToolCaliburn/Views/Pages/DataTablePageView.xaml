@@ -2,6 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconpacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:mtsToolCaliburn.ViewModels.Components"
              xmlns:local="clr-namespace:mtsToolCaliburn.Views.Pages"
@@ -14,7 +16,26 @@
             <Border Style="{StaticResource container}">
                 <StackPanel Margin="10">
                     <Label Style="{StaticResource card-title}" Content="Data Table"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Margin="10 5" Grid.Column="0">
+                            <Label Content="Show" Style="{StaticResource body-text}"  VerticalAlignment="Center" ></Label>
+                            <ComboBox Style="{StaticResource select-primary}" SelectedValue="{Binding PaginationLine}"  Width="52">
+                                <ComboBoxItem>5</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">10</ComboBoxItem>
+                                <ComboBoxItem>15</ComboBoxItem>
+                                <ComboBoxItem>all</ComboBoxItem>
+                            </ComboBox>
+                            <Label Content="entries" Style="{StaticResource body-text}" VerticalAlignment="Center" ></Label>
+                        </StackPanel>
 
+                        <Grid Margin="10 5" Grid.Column="1">
+                            <TextBox Style="{StaticResource textbox-primary}" Text="{Binding TableSearchValue}" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="Search"></TextBox>
+                        </Grid>
+                    </Grid>
                     <DataGrid Style="{StaticResource table-primary}" ColumnHeaderStyle="{StaticResource table-arrow-hearder}"
                               AutoGenerateColumns="False" ItemsSource="{Binding DataTableEntries}" GridLinesVisibility="None" >
                         <DataGrid.Columns>
@@ -40,6 +61,33 @@
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <Label Content="Showing" Style="{StaticResource body-text}"></Label>
+                            <Label Content="{Binding tablePageStartNum}"  Style="{StaticResource body-text}"></Label>
+                            <Label Content=" to " Style="{StaticResource body-text}"></Label>
+                            <Label Content="{Binding tablePageEndNum}" Style="{StaticResource body-text}"></Label>
+                            <Label Content=" of  " Style="{StaticResource body-text}"></Label>
+                            <Label Content="{Binding tablePageSum}"  Style="{StaticResource body-text}"></Label>
+                            <Label Content=" entries " Style="{StaticResource body-text}"></Label>
+                        </StackPanel>
+                        <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Height="48" >
+                            <DockPanel>
+                                <Grid Style="{StaticResource bg-secondary}" Margin="2" Width="32"  DockPanel.Dock="Right">
+                                    <iconpacks:PackIconMaterial Kind="ChevronRight" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="8" Height="8"></iconpacks:PackIconMaterial>
+                                </Grid>
+                                <ItemsControl DockPanel.Dock="Right"></ItemsControl>
+                                <Grid Style="{StaticResource bg-secondary}" Margin="2" Width="32" DockPanel.Dock="Right">
+                                    <iconpacks:PackIconMaterial Kind="ChevronLeft" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="8" Height="8"></iconpacks:PackIconMaterial>
+                                </Grid>
+                                <Grid></Grid>
+                            </DockPanel>
+                        </ScrollViewer>
+                    </Grid>
                 </StackPanel>
             </Border>
         </StackPanel>

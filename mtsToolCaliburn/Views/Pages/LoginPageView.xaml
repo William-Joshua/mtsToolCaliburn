@@ -4,7 +4,7 @@
          xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
          xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
          xmlns:cal="http://www.caliburnproject.org" >
-    <Grid>
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
         <Border Style="{StaticResource container}">
             <Grid>
                 <StackPanel Margin="48">

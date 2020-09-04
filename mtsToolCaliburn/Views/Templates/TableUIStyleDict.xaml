@@ -116,98 +116,42 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate  TargetType="{x:Type DataGrid}">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="48px"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="48px"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Orientation="Horizontal" Margin="10 5" Grid.Column="0">
-                                <Label Content="Show" Style="{StaticResource body-text}"  VerticalAlignment="Center" ></Label>
-                                <ComboBox Style="{StaticResource select-primary}"  Width="52">
-                                    <ComboBoxItem>5</ComboBoxItem>
-                                    <ComboBoxItem IsSelected="True">10</ComboBoxItem>
-                                    <ComboBoxItem>15</ComboBoxItem>
-                                    <ComboBoxItem>all</ComboBoxItem>
-                                </ComboBox>
-                                <Label Content="entries" Style="{StaticResource body-text}" VerticalAlignment="Center" ></Label>
-                            </StackPanel>
-
-                            <Grid Margin="10 5" Grid.Column="1">
-                                <TextBox Style="{StaticResource textbox-primary}" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="Search"></TextBox>
-                            </Grid>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <Border
+                    <Border
 					        BorderBrush="{TemplateBinding BorderBrush}"
 					        Padding="{TemplateBinding Padding}">
-                                <ScrollViewer x:Name="tableScrollViewer" Focusable="false">
-                                    <ScrollViewer.Template>
-                                        <ControlTemplate TargetType="{x:Type ScrollViewer}">
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="Auto" />
-                                                </Grid.ColumnDefinitions>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="Auto" />
-                                                    <RowDefinition Height="*" />
-                                                    <RowDefinition Height="Auto" />
-                                                </Grid.RowDefinitions>
-                                                <DataGridColumnHeadersPresenter x:Name="columnHeadersPresenter"   Grid.Column="1" >
+                            <ScrollViewer x:Name="tableScrollViewer" Focusable="false">
+                                <ScrollViewer.Template>
+                                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <DataGridColumnHeadersPresenter x:Name="columnHeadersPresenter"   Grid.Column="1" >
 
-                                                </DataGridColumnHeadersPresenter>
-                                                <ScrollContentPresenter x:Name="scrollContentPresenter"
+                                            </DataGridColumnHeadersPresenter>
+                                            <ScrollContentPresenter x:Name="scrollContentPresenter"
 										                        Grid.Row="1"
 										                        Grid.ColumnSpan="2"
 										                        CanContentScroll="{TemplateBinding CanContentScroll}" />
-                                                <Grid Grid.Row="2" Grid.Column="1">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                    </Grid.ColumnDefinitions>
-                                                </Grid>
+                                            <Grid Grid.Row="2" Grid.Column="1">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
                                             </Grid>
-                                        </ControlTemplate>
-                                    </ScrollViewer.Template>
-                                    <ItemsPresenter />
-                                </ScrollViewer>
-                            </Border>
-                        </Grid>
-                        <Grid Grid.Row="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"></ColumnDefinition>
-                                <ColumnDefinition Width="8*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Orientation="Horizontal" Grid.Column="0">
-                                <Label Content="Showing" Style="{StaticResource body-text}"></Label>
-                                <Label Content="{Binding tablePageStartNum}"  Style="{StaticResource body-text}"></Label>
-                                <Label Content=" to " Style="{StaticResource body-text}"></Label>
-                                <Label Content="{Binding tablePageEndNum}" Style="{StaticResource body-text}"></Label>
-                                <Label Content=" of  " Style="{StaticResource body-text}"></Label>
-                                <Label Content="{Binding tablePageSum}"  Style="{StaticResource body-text}"></Label>
-                                <Label Content=" entries " Style="{StaticResource body-text}"></Label>
-                            </StackPanel>
-                            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" >
-                                <DockPanel>
-                                    <Grid Style="{StaticResource bg-secondary}" Margin="2" Width="32"  DockPanel.Dock="Right">
-                                        <iconpacks:PackIconMaterial Kind="ChevronRight" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="8" Height="8"></iconpacks:PackIconMaterial>
-                                    </Grid>
-                                    <ItemsControl DockPanel.Dock="Right"></ItemsControl>
-                                    <Grid Style="{StaticResource bg-secondary}" Margin="2" Width="32" DockPanel.Dock="Right">
-                                        <iconpacks:PackIconMaterial Kind="ChevronLeft" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="8" Height="8"></iconpacks:PackIconMaterial>
-                                    </Grid>
-                                    <Grid></Grid>
-                                </DockPanel>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ScrollViewer.Template>
+                                <ItemsPresenter />
                             </ScrollViewer>
-                        </Grid>
-                    </Grid>
+                        </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

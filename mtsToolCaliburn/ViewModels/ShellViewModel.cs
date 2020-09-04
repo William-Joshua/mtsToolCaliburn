@@ -105,11 +105,7 @@ namespace mtsToolCaliburn {
         }
         public void WindowMinimizeScreen()
         {
-            if (_fullScreenState != ScreenState.Mini)
-            {
-                Application.Current.MainWindow.WindowState = WindowState.Minimized;
-                _fullScreenState = ScreenState.Mini;
-            }
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
         }
         private ScreenState _fullScreenState = ScreenState.Normal;
         public ScreenState FullScreenState
@@ -126,8 +122,7 @@ namespace mtsToolCaliburn {
         public enum ScreenState
         {
             Max,
-            Normal,
-            Mini
+            Normal
         }
         #endregion
 
