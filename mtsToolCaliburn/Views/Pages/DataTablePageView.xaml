@@ -5,6 +5,7 @@
              xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:iconpacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org" 
              xmlns:vm="clr-namespace:mtsToolCaliburn.ViewModels.Components"
              xmlns:local="clr-namespace:mtsToolCaliburn.Views.Pages"
              mc:Ignorable="d" 
@@ -33,7 +34,7 @@
                         </StackPanel>
 
                         <Grid Margin="10 5" Grid.Column="1">
-                            <TextBox Style="{StaticResource textbox-primary}" Text="{Binding TableSearchValue}" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="Search"></TextBox>
+                            <TextBox Style="{StaticResource textbox-primary}" Text="{Binding TableSearchValue,Mode=OneWayToSource}" cal:Message.Attach="[Event KeyDown] = [Action QuickQueryTableSearch()]" Width="180" HorizontalAlignment="Right" mah:TextBoxHelper.Watermark="Search"></TextBox>
                         </Grid>
                     </Grid>
                     <DataGrid Style="{StaticResource table-primary}" ColumnHeaderStyle="{StaticResource table-arrow-hearder}"
@@ -68,11 +69,11 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Orientation="Horizontal" Grid.Column="0">
                             <Label Content="Showing" Style="{StaticResource body-text}"></Label>
-                            <Label Content="{Binding tablePageStartNum}"  Style="{StaticResource body-text}"></Label>
+                            <Label Content="{Binding TablePageStartNum}"  Style="{StaticResource body-text}"></Label>
                             <Label Content=" to " Style="{StaticResource body-text}"></Label>
-                            <Label Content="{Binding tablePageEndNum}" Style="{StaticResource body-text}"></Label>
+                            <Label Content="{Binding TablePageEndNum}" Style="{StaticResource body-text}"></Label>
                             <Label Content=" of  " Style="{StaticResource body-text}"></Label>
-                            <Label Content="{Binding tablePageSum}"  Style="{StaticResource body-text}"></Label>
+                            <Label Content="{Binding TablePageSum}"  Style="{StaticResource body-text}"></Label>
                             <Label Content=" entries " Style="{StaticResource body-text}"></Label>
                         </StackPanel>
                         <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Height="48" >
